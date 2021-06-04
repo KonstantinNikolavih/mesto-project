@@ -64,7 +64,7 @@ ul, li, p, h3, h2, div, img {
 /*сброс отступов*/
 
 .header {
-  max-width: 1184px;
+  max-width: 100%;
   padding-top: 45px;
   margin-left: 48px;
   margin-right: 48px;
@@ -90,5 +90,125 @@ ul, li, p, h3, h2, div, img {
   border: 1px solid #545454;
 }
 .profile {
+  max-width: 1184px;
+  padding-top: 40px;
+  margin-left: 48px;
+  margin-right: 48px;
+  display: flex;
+}
+.avatar {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+}
+.edit__button {
+  width: 24px;
+  height: 24px;
+  border: 1px solid #FFFFFF;
+  box-sizing: border-box;
+}
+.profile__info {
+  width: 336px;
+  height: 73px;
+  margin-left: 30px;
+  margin-top: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.profile__info-avtor {
+  width: 294px;
+  height: 39px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 42px;
+  line-height: 48px;
+  /* or 114% */
+  color: #FFFFFF;
+}
+.profile__info-info {
+  width: 336px;
+  height: 18px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 22px;
+  color: #FFFFFF;
+}
+.add__button {
+  width: 150px;
+  height: 50px;
+  border: 2px solid #FFFFFF;
+  box-sizing: border-box;
+  border-radius: 2px;
+  display: flex;
+  margin-left: 200px;
+}
+.vector {
+  height: 22px;
+  left: 77.66%;
+  right: 20.62%;
+  text-align: center;
+  background: #FFFFFF;
+}
+.elements {
+  width: 880px;
+  height: 744px;
+  margin-top: 51px;
+}
+.element {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 17px;
+  row-gap: 20px;
+}
+.elements__item {
+  width: 282px;
+  height: 361px;
+  border-radius: 10px;
+}
+.elements__img {
+  width: 282px;
+  height: 282px;
+  border-radius: 10px 10px 0px 0px;
+}
+.elements__title {
+  width: 106px;
+  height: 23px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  background-color: #fff;
+}
+.elements__ikonka {
 
+}
+.footer {
+  max-width: 1184px;
+  padding-top: 28px;
+  margin-left: 48px;
+  margin-right: 48px;
+  /* margin: auto; */
+  display: flex;
+  justify-content: space-between;
+  align-content: flex-start;
+}
+.footer__copyright {
+  max-width: 100%;
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  /* identical to box height, or 114% */
+  text-align: right;
+  color: #FFF;
+  display: flex;
+  margin-bottom: 0;
+  margin-top: 0;
 }
