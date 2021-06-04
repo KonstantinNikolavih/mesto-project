@@ -4,11 +4,15 @@
   /* поэтому выше установлена минимальная ширина страницы */
   /*min-height: 6800px;
   padding-top: 22px;*/
-  background-color: #2A2C2F;
+  background-color: #000;
   /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif, line-height;
+}
+.page__section {
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 /*сброс отступов*/
 html, body, div, span, applet, object, iframe,
@@ -60,22 +64,31 @@ ul, li, p, h3, h2, div, img {
 /*сброс отступов*/
 
 .header {
-  max-width: 1200px;
-  height: 56px;
+  max-width: 1184px;
+  padding-top: 45px;
+  margin-left: 48px;
+  margin-right: 48px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
 }
 .header__logo {
   width: 142px;
   height: 33px;
-  margin-top: 45px;
-  margin-left: 200px;
-  background-image: url(./images/Vector.svg);
-  background-color: #fff;
+ /*  margin-top: 45px;
+  margin-left: 200px; */
+  background-image: url(../images/Vector.svg);
+  background-size: contain;
+
+  /* background-color: #fff; */
 }
 .header__line {
   width: 880px;
   height: 0px;
-  left: 200px;
-  top: 119px;
+  margin-top: 41px;
   opacity: 0.7;
   border: 1px solid #545454;
+}
+.profile {
+
 }
