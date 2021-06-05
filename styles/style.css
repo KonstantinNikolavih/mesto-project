@@ -64,10 +64,10 @@ ul, li, p, h3, h2, div, img {
 /*сброс отступов*/
 
 .header {
-  max-width: 1184px;
+  max-width: 880px;
   padding-top: 45px;
-  margin-left: 48px;
-  margin-right: 48px;
+  margin-left: 200px;
+  margin-right: 200px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -90,10 +90,10 @@ ul, li, p, h3, h2, div, img {
   border: 1px solid #545454;
 }
 .profile {
-  max-width: 1184px;
+  max-width: 880px;
   padding-top: 40px;
-  margin-left: 48px;
-  margin-right: 48px;
+  margin-left: 200px;
+  margin-right: 200px;
   display: flex;
 }
 .avatar {
@@ -234,11 +234,11 @@ ul, li, p, h3, h2, div, img {
   color: #fff;
 }
 .footer {
-  max-width: 1184px;
+  max-width: 880px;
   padding-top: 98px;
   padding-bottom: 60px;
-  margin-left: 48px;
-  margin-right: 48px;
+  margin-left: 200px;
+  margin-right: 200px;
   display: flex;
   justify-content: space-between;
   align-content: flex-start;
