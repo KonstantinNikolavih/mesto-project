@@ -105,16 +105,31 @@ ul, li, p, h3, h2, div, img {
   width: 24px;
   height: 24px;
   border: 1px solid #FFFFFF;
+  background-color: black;
   box-sizing: border-box;
+  margin-top: 17px;
+}
+.edit__button-vector {
+  min-width: 10px;
+  height: 10px;
+  background-image: url(../images/Vector1.svg);
+  /* background: #FFFFFF; */
+  background-color: black;
+  color: #545454;
 }
 .profile__info {
   width: 336px;
   height: 73px;
   margin-left: 30px;
   margin-top: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
+  display: grid;
+  grid-template-columns: 297px 1fr;
+  column-gap: 9px;
+  row-gap: 9px;
+  grid-template-rows: 34px 1fr;
+  align-content: center;
+  justify-content: start;
+  align-items: center;
 }
 .profile__info-avtor {
   width: 294px;
@@ -148,7 +163,7 @@ ul, li, p, h3, h2, div, img {
   display: flex;
   margin-left: 200px;
 }
-.vector {
+.add__button-vector {
   width: 20px;
   height: 22px;
   background-image: url(../images/Vector+.svg);
@@ -202,6 +217,10 @@ ul, li, p, h3, h2, div, img {
   width: 20px;
   height: 19px;
   background: #000000;
+  display: flex;
+}
+.elements__pop {
+  display: flex;
 }
 .footer {
   max-width: 1184px;
