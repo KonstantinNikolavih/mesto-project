@@ -8,7 +8,7 @@
   /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif, line-height;
+  font-family: 'Inter', Arial, sans-serif;
 }
 .page__section {
   margin: 0 auto;
@@ -64,7 +64,7 @@ ul, li, p, h3, h2, div, img {
 /*сброс отступов*/
 
 .header {
-  max-width: 100%;
+  max-width: 1184px;
   padding-top: 45px;
   margin-left: 48px;
   margin-right: 48px;
@@ -119,7 +119,7 @@ ul, li, p, h3, h2, div, img {
 .profile__info-avtor {
   width: 294px;
   height: 39px;
-  font-family: Inter;
+  font-family: 'Inter', Arial, sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 42px;
@@ -130,7 +130,7 @@ ul, li, p, h3, h2, div, img {
 .profile__info-info {
   width: 336px;
   height: 18px;
-  font-family: Inter;
+  font-family: 'Inter', Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 18px;
@@ -138,20 +138,26 @@ ul, li, p, h3, h2, div, img {
   color: #FFFFFF;
 }
 .add__button {
-  width: 150px;
+  min-width: 150px;
   height: 50px;
+  margin-top: 27px;
   border: 2px solid #FFFFFF;
+  background-color: black;
   box-sizing: border-box;
   border-radius: 2px;
   display: flex;
   margin-left: 200px;
 }
 .vector {
+  width: 20px;
   height: 22px;
-  left: 77.66%;
-  right: 20.62%;
+  background-image: url(../images/Vector+.svg);
+  background-color: black;
+  color: #545454;
   text-align: center;
-  background: #FFFFFF;
+  align-self: center;
+  margin: auto;
+ /*  background: #FFFFFF; */
 }
 .elements {
   width: 880px;
@@ -168,6 +174,10 @@ ul, li, p, h3, h2, div, img {
   width: 282px;
   height: 361px;
   border-radius: 10px;
+  background-color: #fff;
+  display: grid;
+  justify-content: center;
+  justify-items: center;
 }
 .elements__img {
   width: 282px;
@@ -175,28 +185,34 @@ ul, li, p, h3, h2, div, img {
   border-radius: 10px 10px 0px 0px;
 }
 .elements__title {
-  width: 106px;
+  width: 200px;
   height: 23px;
-  font-family: Inter;
+  font-family: 'Inter', Arial, sans-serif;
   font-style: normal;
   font-weight: 900;
   font-size: 24px;
   line-height: 29px;
   color: #000000;
   background-color: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 .elements__ikonka {
-
+  width: 20px;
+  height: 19px;
+  background: #000000;
 }
 .footer {
   max-width: 1184px;
-  padding-top: 28px;
+  padding-top: 98px;
+  padding-bottom: 60px;
   margin-left: 48px;
   margin-right: 48px;
-  /* margin: auto; */
   display: flex;
   justify-content: space-between;
   align-content: flex-start;
+
 }
 .footer__copyright {
   max-width: 100%;
@@ -205,9 +221,8 @@ ul, li, p, h3, h2, div, img {
   font-weight: normal;
   font-size: 14px;
   line-height: 16px;
-  /* identical to box height, or 114% */
   text-align: right;
-  color: #FFF;
+  color: #545454;
   display: flex;
   margin-bottom: 0;
   margin-top: 0;
