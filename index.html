@@ -18,6 +18,10 @@
     <img class="profile__avatar" alt="аватарка" src="../images/image (5).png">
     <div class="profile__info">
       <p class="profile__info-avtor">Жак-Ив Кусто</p>
+      <input type="checkbox" name="extra-option" id="black-background" class="form__item form__item_el_extra-options" value="black-background">
+      <label for="black-background" class="form__label form__label_direction_right">Чёрный фон</label>
+      <input type="checkbox" name="extra-option" id="bold-heading" class="form__item form__item_el_extra-options" value="bold-heading" checked>
+      <label for="bold-heading" class="form__label form__label_direction_right">Жирный заголовок</label>
       <button type="number" class="edit__button">
         <p class="edit__button-vector"></p>
       </button>
@@ -25,6 +29,11 @@
     </div>
     <button type="submit" class="add__button">
       <p class="add__button-vector"></p>
+
+
+
+      <fieldset class="form__handlers">
+        <input type="submit" class="form__button">
     </button>
   </section>
   <section class="elements page__section">
@@ -77,9 +86,9 @@
       <li class="elements__item">
         <img alt="фотография замка" src="../images/kirill-pershin-1556355-unsplash.png" class="elements__img">
         <div class="elements__pop">
-          <h2 class="elements__title">Карачаево-Ч...</h2>
+          <h2 class="elements__title">Карачаево-Черкасово</h2>
           <button class="elements__ikonka">
-            <p class="add__button-cerdce"></p>
+            <p id="heart" class="add__button-cerdce"></p>
           </button>
         </div>
       </li>

@@ -10,6 +10,9 @@
   background-color: #fff;
   display: flex;
   align-items: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 /* @media screen and (max-width: 768px) {
   .places {
