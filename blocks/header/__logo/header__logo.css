@@ -1,0 +1,18 @@
+.header__logo {
+  width: 142px;
+  height: 33px;
+ /*  margin-top: 45px;
+  margin-left: 200px; */
+  background-image: url(../images/Vector.svg);
+  background-size: contain;
+
+  /* background-color: #fff; */
+}
+/* @media screen and (max-width: 500px) {
+  .header__logo {
+    min-width: 142px;
+    min-height: 42px;
+    background-size: contain;
+  }
+}
+ */

@@ -1,19 +1,5 @@
-.page {
-  max-width: 1280px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
-  /*min-height: 6800px;
-  padding-top: 22px;*/
-  background-color: #000;
-  /* выше установили ограничение по максимальной ширине */
-  margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Inter', Arial, sans-serif;
-}
-.page__section {
-  margin: 0 auto;
-  box-sizing: border-box;
-}
+
+
 /*сброс отступов*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -63,32 +49,9 @@ ul, li, p, h3, h2, div, img {
 }
 /*сброс отступов*/
 
-.header {
-  max-width: 880px;
-  padding-top: 45px;
-  margin-left: 200px;
-  margin-right: 200px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-.header__logo {
-  width: 142px;
-  height: 33px;
- /*  margin-top: 45px;
-  margin-left: 200px; */
-  background-image: url(../images/Vector.svg);
-  background-size: contain;
 
-  /* background-color: #fff; */
-}
-.header__line {
-  width: 880px;
-  height: 0px;
-  margin-top: 41px;
-  opacity: 0.7;
-  border: 1px solid #545454;
-}
+
+
 .profile {
   max-width: 880px;
   padding-top: 40px;
