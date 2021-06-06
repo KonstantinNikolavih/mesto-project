@@ -52,18 +52,8 @@ ul, li, p, h3, h2, div, img {
 
 
 
-.profile {
-  max-width: 880px;
-  padding-top: 40px;
-  margin-left: 200px;
-  margin-right: 200px;
-  display: flex;
-}
-.avatar {
-  border-radius: 50%;
-  width: 120px;
-  height: 120px;
-}
+
+
 .edit__button {
   width: 24px;
   height: 24px;
@@ -80,41 +70,7 @@ ul, li, p, h3, h2, div, img {
   background-color: black;
   color: #545454;
 }
-.profile__info {
-  width: 336px;
-  height: 73px;
-  margin-left: 30px;
-  margin-top: 12px;
-  display: grid;
-  grid-template-columns: 297px 1fr;
-  column-gap: 9px;
-  row-gap: 9px;
-  grid-template-rows: 34px 1fr;
-  align-content: center;
-  justify-content: start;
-  align-items: center;
-}
-.profile__info-avtor {
-  width: 294px;
-  height: 39px;
-  font-family: 'Inter', Arial, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 42px;
-  line-height: 48px;
-  /* or 114% */
-  color: #FFFFFF;
-}
-.profile__info-info {
-  width: 336px;
-  height: 18px;
-  font-family: 'Inter', Arial, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 18px;
-  line-height: 22px;
-  color: #FFFFFF;
-}
+
 .add__button {
   min-width: 150px;
   height: 50px;
