@@ -93,59 +93,12 @@ ul, li, p, h3, h2, div, img {
   margin: auto;
  /*  background: #FFFFFF; */
 }
-.elements {
-  width: 880px;
-  height: 744px;
-  margin-top: 51px;
-}
-.element {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  column-gap: 17px;
-  row-gap: 20px;
-}
-.elements__item {
-  width: 282px;
-  height: 361px;
-  border-radius: 10px;
-  background-color: #fff;
-  display: grid;
-  justify-content: center;
-  justify-items: center;
-}
-.elements__img {
-  width: 282px;
-  height: 282px;
-  border-radius: 10px 10px 0px 0px;
-}
-.elements__pop {
-  display: grid;
-  grid-template-columns: 190px 1fr;
-  column-gap: 30px;
-  align-content: space-between;
-}
-.elements__title {
-  width: 197px;
-  height: 23px;
-  font-family: 'Inter', Arial, sans-serif;
-  font-style: normal;
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 29px;
-  color: #000000;
-  background-color: #fff;
-  display: flex;
-  align-items: center;
-}
-.elements__ikonka {
-/*   width: 20px;
-  height: 19px;
-  background: #000000;
-  display: flex; */
-  color: #fff;
-  background-color: #fff;
-  border: 1px solid #fff;
-}
+
+
+
+
+
+
 .add__button-cerdce {
   width: 22px;
   height: 19px;
