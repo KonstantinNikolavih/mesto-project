@@ -1,7 +1,9 @@
 .elements {
-  width: 880px;
+  max-width: 880px;
   height: 744px;
   margin-top: 51px;
+  margin-left: 200px;
+  margin-right: 200px;
 }
 /* @media screen and (max-width: 768px) {
   .places {
