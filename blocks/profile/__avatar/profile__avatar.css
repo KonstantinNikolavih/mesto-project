@@ -3,13 +3,13 @@
   width: 120px;
   height: 120px;
 }
-/* @media screen and (max-width: 768px) {
-  .places {
-    padding-top: 88px;
+@media screen and (max-width: 768px) {
+  .profile__avatar {
+    /* padding-top: 42px; */
   }
 }
 @media screen and (max-width: 320px) {
-  .places {
-    padding-top: 64px;
+  .profile__avatar {
+    /* padding-top: 64px; */
   }
-} */
+}
