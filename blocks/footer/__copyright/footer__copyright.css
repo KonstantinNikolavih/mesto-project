@@ -11,27 +11,17 @@
   margin-bottom: 0;
   margin-top: 0;
 }
-/*
-@media screen and (max-width: 1024px) {
-  .footer__copyright {
-  }
-}
+
 @media screen and (max-width: 768px) {
   .footer__copyright {
 
   }
 }
-@media screen and (max-width: 526px) {
+@media screen and (max-width: 320px) {
   .footer__copyright {
-    text-align: left;
-    line-height: 10px;
-  }
-}
-@media screen and (max-width: 525px) {
-  .footer__copyright {
-    margin-top: 16px;
+    line-height: 17px;
+    /* margin-top: 16px;
     line-height: 16px;
-    margin-left: 16px;
+    margin-left: 16px; */
   }
 }
- */
