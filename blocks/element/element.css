@@ -4,14 +4,17 @@
   column-gap: 17px;
   row-gap: 20px;
 }
-/* @media screen and (max-width: 768px) {
-  .places {
-    padding-top: 88px;
+@media screen and (max-width: 768px) {
+  .element {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 17px;
+    row-gap: 20px;
   }
 }
 @media screen and (max-width: 320px) {
-  .places {
-    padding-top: 64px;
+  .element {
+    grid-template-columns: repeat(1, 1fr);
+    column-gap: 17px;
+    row-gap: 20px;
   }
 }
- */
