@@ -183,6 +183,25 @@ ul, li, p, h3, h2, div, img {
   transform-origin: 100% 100%;
 }
  */
+ .popup__close-icon {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, .95);
+  /* position: absolute; */
+  top: 0;
+  right: -50px;
+  display: flex;
+  cursor: pointer;
+  transition: opacity .4s;
+  margin-left: 780px;
+ }
+ .popup__close-img {
+  width: 58px;
+  height: 58px;
+  /* margin: auto; */
+  transform: rotate(-90deg);
+  margin-left: -10px;
+}
  .popup {
   width: 430px;
   height: 330px;
@@ -191,13 +210,17 @@ ul, li, p, h3, h2, div, img {
   position: absolute;
   display: none;
   margin-left: 350px;
+  border-radius: 10px;
  }
  .popup_opened {
   display: block;
+  border-radius: 10px;
+  background-color: #fff;
  }
- .form__container {
+ .popup__container {
   height: 100px;
   background-color: #fff;
+  border-radius: 10px;
  }
   .form__admin {
     /* height: 100vh; */
@@ -275,4 +298,9 @@ ul, li, p, h3, h2, div, img {
   margin-top: 48px;
   background-color: #000;
   color: #fff;
+}
+.edit__bu:hover {
+  background: #000000;
+  opacity: 0.8;
+  border-radius: 2px;
 }
