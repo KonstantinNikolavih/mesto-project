@@ -1,6 +1,7 @@
 .profile__button-edit-vector {
   min-width: 10px;
   height: 10px;
+  margin: 0;
   background-image: url(../../../../images/Vector1.svg);
   /* background: #FFFFFF; */
   background-color: black;
