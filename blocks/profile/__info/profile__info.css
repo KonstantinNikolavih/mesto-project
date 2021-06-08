@@ -5,8 +5,8 @@
   margin-top: 30px;
   display: grid;
   grid-template-columns: 297px 1fr;
-  column-gap: 9px;
-  row-gap: 9px;
+  column-gap: 19px;
+  row-gap: 16px;
   grid-template-rows: 34px 1fr;
   align-content: center;
   justify-content: start;
@@ -14,13 +14,15 @@
 }
 @media screen and (max-width: 768px) {
   .profile__info {
-    width: 282px;
+    max-width: 242px;
     height: 54px;
+    margin-left: 0;
+    grid-template-columns: 197px 1fr;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 650px) {
   .profile__info {
-    grid-template-columns: 244px 1fr;
+    grid-template-columns: 194px 1fr;
     column-gap: 10px;
     row-gap: 14px;
     grid-template-rows: 34px 1fr;

@@ -7,13 +7,14 @@
   font-size: 18px;
   line-height: 22px;
   color: #FFFFFF;
+  margin: 0;
 }
 @media screen and (max-width: 768px) {
   .profile__info-name {
     /* padding-top: 88px; */
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 650px) {
   .profile__info-name {
     width: 282px;
     height: 14px;

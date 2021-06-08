@@ -14,14 +14,18 @@
   .profile {
     padding-top: 42px;
   }
-}
-@media screen and (max-width: 320px) {
-  .profile {
-    max-width: 282px;
+}*/
+@media screen and (max-width: 650px) {
+  .profile__button-edit-vector {
+    min-width: 7.5px;
+    height: 7.5px;
+    margin-left: -3px;
+    margin-top: -2px;
+   /*  max-width: 282px;
     min-height: 286px;
     margin-left: 19px;
     margin-right: 19px;
     flex-direction: column;
-    align-items: center;
+    align-items: center; */
   }
-} */
+}
