@@ -7,16 +7,16 @@
  }
 @media screen and (max-width: 768px) {
   .popup__container {
-    padding-top: 42px;
+    /* padding-top: 42px; */
   }
 }
 @media screen and (max-width: 320px) {
   .popup__container {
-    max-width: 282px;
-    min-height: 286px;
+    width: 282px;
+    height: 322px;
     margin-left: 19px;
     margin-right: 19px;
-    flex-direction: column;
-    align-items: center;
+    /* flex-direction: column;
+    align-items: center; */
   }
 }
