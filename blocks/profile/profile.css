@@ -4,6 +4,7 @@
   margin-left: 200px;
   margin-right: 200px;
   display: flex;
+  margin: 0 auto;
 }
 @media screen and (max-width: 768px) {
   .profile {
