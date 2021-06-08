@@ -1,0 +1,28 @@
+.popup__heading {
+  font-family: 'Inter', Arial, sans-serif;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  width: 330px;
+  height: 23px;
+  margin-left: 36px;
+  margin-right: 36px;
+  margin-top: 34px;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 768px) {
+  .popup__heading {
+    padding-top: 42px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .popup__heading {
+    max-width: 282px;
+    min-height: 286px;
+    margin-left: 19px;
+    margin-right: 19px;
+    flex-direction: column;
+    align-items: center;
+  }
+}

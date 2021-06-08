@@ -1,0 +1,22 @@
+.popup__container {
+  width: 430px;
+  height: 330px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: auto;
+ }
+@media screen and (max-width: 768px) {
+  .popup__container {
+    padding-top: 42px;
+  }
+}
+@media screen and (max-width: 320px) {
+  .popup__container {
+    max-width: 282px;
+    min-height: 286px;
+    margin-left: 19px;
+    margin-right: 19px;
+    flex-direction: column;
+    align-items: center;
+  }
+}

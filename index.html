@@ -101,14 +101,12 @@
 
 
   <popup class="popup popup_opened">
-    <button type="button" class="popup__close-icon"></button>
+    <button type="button" class="popup__close"></button>
     <form class="popup__container">
-      <h2 class="form__heading">Редактировать профиль</h2>
-      <fieldset class="form__input-container form__input-container_ctrl_texts">
-        <label for="heading" class="form__label"></label>
-        <input class="form__item form__item_el_heading " type="text" name="firstname" placeholder="Жак-Ив Кусто" required>
-        <label for="subheading" class="form__label"></label>
-        <input class="form__item form__item_el_subheading" type="text" name="firstname" placeholder="Исследователь океана" required>
+      <h2 class="popup__heading">Редактировать профиль</h2>
+      <fieldset class="popup__input">
+        <input class="popup__item" type="text" name="firstname" placeholder="Жак-Ив Кусто" required>
+        <input class="popup__item" type="text" name="firstname" placeholder="Исследователь океана" required>
         <button class="edit__bu" id="edit__button" type="button">Сохранить</button>
       </fieldset>
     </form>
