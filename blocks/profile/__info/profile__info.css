@@ -25,7 +25,9 @@
     grid-template-columns: 194px 1fr;
     column-gap: 10px;
     row-gap: 14px;
-    grid-template-rows: 34px 1fr;
+    grid-template-rows: 27px 1fr;
+    align-items: end;
+    margin-left: 40px;
     /* padding-top: 64px; */
   }
 }

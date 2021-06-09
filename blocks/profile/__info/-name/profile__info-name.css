@@ -20,5 +20,7 @@
     height: 14px;
     font-size: 14px;
     line-height: 17px;
+    text-align: center;
+    margin-left: -40px;
   }
 }
