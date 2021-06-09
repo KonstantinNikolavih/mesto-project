@@ -4,8 +4,12 @@
   background-image: url(../../../images/Close\ Icon.svg);
   background-color: rgba(0, 0, 0, 0);
   background-size: contain;
+  align-self: center;
+  background-position: center;
+  background-repeat: repeat-x;
   position: absolute;
-  top: 145px;
+  top: 31%;
+  left: 13.5%;
   display: flex;
   cursor: pointer;
   transition: opacity .4s;
@@ -15,13 +19,28 @@
  .popup__close:hover {
   opacity: 0.6;
  }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .popup__close {
     padding-top: 42px;
+    top: 25%;
+    left: -1.5%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .popup__close {
+    top: 24.5%;
+    left: -10.5%;
+  }
+}
+@media screen and (max-width: 650px) {
+  .popup__close {
+    top: 24.5%;
+    left: -21.5%;
   }
 }
 @media screen and (max-width: 320px) {
   .popup__close {
-
+    top: 23.5%;
+    left: -127.5%;
   }
 }
