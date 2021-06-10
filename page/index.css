@@ -22,7 +22,7 @@
 
 @import url(../blocks/element/element.css);
 @import url(../blocks/elements/elements.css);
-@import url(../blocks/elements/__ikonka/elements__ikonka.css);
+@import url(../blocks/elements/__group/elements__group.css);
 @import url(../blocks/elements/__img/elements__img.css);
 @import url(../blocks/elements/__item/elements__item.css);
 @import url(../blocks/elements/__line/elements__line.css);
