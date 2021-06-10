@@ -1,0 +1,16 @@
+.profile__button-add-vector {
+  width: 20px;
+  height: 22px;
+  background-image: url(../../../../images/Vector+.svg);
+  background-color: black;
+  color: #545454;
+  text-align: center;
+  align-self: center;
+  margin: 0 auto;
+}
+@media screen and (max-width: 650px) {
+  .profile {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
