@@ -1,8 +1,6 @@
 .profile {
   max-width: 880px;
   padding-top: 40px;
-  /* margin-left: 200px;
-  margin-right: 200px; */
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -31,12 +29,7 @@
     align-items: center;
     justify-content: center;
     align-content: center;
-    /* display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(282px, 1fr)); */
-   /*  max-width: 282px; */
     column-gap: 0;
     row-gap: 0;
-  /*   justify-items: center;
-    justify-content: center; */
   }
 }

@@ -11,7 +11,6 @@
 }
 @media screen and (max-width: 768px) {
   .profile__info-name {
-    /* padding-top: 88px; */
   }
 }
 @media screen and (max-width: 650px) {
