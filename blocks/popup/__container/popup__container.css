@@ -8,7 +8,6 @@
  }
 @media screen and (max-width: 768px) {
   .popup__container {
-    /* padding-top: 42px; */
   }
 }
 @media screen and (max-width: 320px) {
@@ -17,7 +16,5 @@
     height: 322px;
     margin-left: 19px;
     margin-right: 19px;
-    /* flex-direction: column;
-    align-items: center; */
   }
 }
