@@ -8,39 +8,29 @@
   background-position: center;
   background-repeat: repeat-x;
   position: absolute;
-  top: 31%;
-  left: 13.5%;
+  top: -40px;
+  left: 418px;
   display: flex;
   cursor: pointer;
   transition: opacity .4s;
-  margin-left: 670px;
   border: 0;
+  padding: 0;
  }
  .popup__close:hover {
   opacity: 0.6;
  }
-@media screen and (max-width: 900px) {
-  .popup__close {
-    padding-top: 42px;
-    top: 25%;
-    left: -1.5%;
-  }
-}
-@media screen and (max-width: 768px) {
-  .popup__close {
-    top: 24.5%;
-    left: -10.5%;
-  }
-}
+
 @media screen and (max-width: 650px) {
   .popup__close {
-    top: 24.5%;
-    left: -21.5%;
+    width: 26px;
+    height: 26px;
+    top: -42px;
+    left: 405px;
+    background-size: revert;
   }
 }
 @media screen and (max-width: 320px) {
   .popup__close {
-    top: 23.5%;
-    left: -127.5%;
+
   }
 }

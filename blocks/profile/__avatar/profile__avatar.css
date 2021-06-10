@@ -5,11 +5,9 @@
 }
 @media screen and (max-width: 768px) {
   .profile__avatar {
-    /* padding-top: 42px; */
   }
 }
 @media screen and (max-width: 320px) {
   .profile__avatar {
-    /* padding-top: 64px; */
   }
 }
