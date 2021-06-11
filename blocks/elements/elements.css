@@ -1,24 +1,12 @@
 .elements {
   max-width: 880px;
-  height: 744px;
   margin-top: 51px;
   margin-left: 200px;
   margin-right: 200px;
   margin: 0 auto;
 }
-@media screen and (max-width: 1000px) {
-  .elements {
-    height: 1124px;
-  }
-}
-@media screen and (max-width: 768px) {
-  .elements {
-
-  }
-}
 @media screen and (max-width: 650px) {
   .elements {
     max-width: 282px;
-    height: 2267px;
   }
 }
