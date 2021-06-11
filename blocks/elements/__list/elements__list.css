@@ -1,4 +1,4 @@
-.element {
+.elements__list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   column-gap: 17px;
@@ -9,19 +9,14 @@
   justify-items: center;
 }
 @media screen and (max-width: 1000px) {
-  .element {
+  .elements__list {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 17px;
     row-gap: 20px;
   }
 }
-@media screen and (max-width: 768px) {
-  .element {
-
-  }
-}
 @media screen and (max-width: 650px) {
-  .element {
+  .elements__list {
     grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
     column-gap: 17px;
     row-gap: 20px;

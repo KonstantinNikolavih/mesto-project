@@ -4,7 +4,6 @@
   height: 25px;
   box-sizing: border-box;
   border-bottom: 1px solid #000;
-  /* opacity: 0.2; */
   background-color: transparent;
   margin-top: 30px;
   font-family: 'Inter', Arial, sans-serif;
@@ -14,16 +13,19 @@
   line-height: 17px;
   display: block;
   padding-bottom: 13px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .popup__item:focus {
   outline-color: #fff6c5;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 650px) {
   .popup__item {
-   /*  padding-top: 42px; */
+    width: 238px;
+    height: 27px;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 450px) {
   .popup__item {
     width: 238px;
     height: 27px;

@@ -29,8 +29,9 @@
     background-size: revert;
   }
 }
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 450px) {
   .popup__close {
-
+    top: -12%;
+    left: 88%;
   }
 }
