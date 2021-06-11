@@ -11,13 +11,3 @@
   left: 0;
   right: 0;
  }
-@media screen and (max-width: 768px) {
-  .popup {
-
-  }
-}
-@media screen and (max-width: 320px) {
-  .popup {
-
-  }
-}

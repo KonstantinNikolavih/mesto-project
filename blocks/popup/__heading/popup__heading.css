@@ -8,13 +8,14 @@
   margin-left: 36px;
   margin-right: 36px;
   margin-top: 34px;
-  margin-bottom: 24px;
+  margin-bottom: 54px;
 }
 @media screen and (max-width: 768px) {
   .popup__heading {
     font-weight: 900;
     font-size: 18px;
     line-height: 22px;
+    margin-bottom: 45px;
   }
 }
 @media screen and (max-width: 650px) {
@@ -23,6 +24,5 @@
     margin-left: 22px;
     margin-right: 22px;
     margin-top: 25px;
-    margin-bottom: 45px;
   }
 }
