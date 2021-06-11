@@ -14,10 +14,12 @@
 }
 @media screen and (max-width: 768px) {
   .profile__info {
-    max-width: 242px;
+    /* max-width: 242px; */
+    width: 66%;
     min-height: 54px;
     margin-left: 0;
-    grid-template-columns: 197px 1fr;
+    /* grid-template-columns: 197px 1fr; */
+    grid-template-columns: 235px 1fr;
   }
 }
 @media screen and (max-width: 650px) {
