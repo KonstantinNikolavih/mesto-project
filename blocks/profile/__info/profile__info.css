@@ -24,11 +24,13 @@
 }
 @media screen and (max-width: 650px) {
   .profile__info {
-    grid-template-columns: 194px 1fr;
+    grid-template-columns: 194px 0fr;
     column-gap: 10px;
     row-gap: 14px;
     grid-template-rows: 27px 1fr;
     align-items: end;
-    margin-left: 40px;
+    justify-items: center;
+    justify-content: center;
+    margin-left: 0;
   }
 }
