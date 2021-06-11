@@ -1,4 +1,4 @@
-.profile__info-avtor {
+.profile__name {
   width: 294px;
   height: 39px;
   font-family: 'Inter', Arial, sans-serif;
@@ -10,7 +10,7 @@
   margin: 0;
 }
 @media screen and (max-width: 768px) {
-  .profile__info-avtor {
+  .profile__name {
     width: 189px;
     height: 26px;
     font-size: 27px;
@@ -19,7 +19,7 @@
   }
 }
 @media screen and (max-width: 650px) {
-  .profile__info-avtor {
+  .profile__name {
     width: 200px;
   }
 }

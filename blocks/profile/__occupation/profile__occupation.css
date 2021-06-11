@@ -1,4 +1,4 @@
-.profile__info-name {
+.profile__occupation {
   width: 336px;
   height: 18px;
   font-family: 'Inter', Arial, sans-serif;
@@ -9,12 +9,8 @@
   color: #FFFFFF;
   margin: 0 auto;
 }
-@media screen and (max-width: 768px) {
-  .profile__info-name {
-  }
-}
 @media screen and (max-width: 650px) {
-  .profile__info-name {
+  .profile__occupation {
     width: 282px;
     height: 14px;
     font-size: 14px;
