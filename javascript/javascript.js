@@ -2,7 +2,7 @@
 // 1 вареант
 
 let openPopup = document.querySelector('.profile__button-edit');
-let popup = document.querySelector('body > .popup');
+let popup = document.querySelector('.popup');
 let closePopup = document.querySelector('.popup__close');
 
 openPopup.addEventListener('click', function() {
@@ -13,6 +13,13 @@ closePopup.addEventListener('click', function() {
     popup.classList.remove('popup_opened');
 })
 
+
+popup.addEventListener('click', function(event) {
+  if (event.target === event.currentTarget) {
+    popup.classList.toggle('popup_opened');
+  }
+
+})
 
 
 
