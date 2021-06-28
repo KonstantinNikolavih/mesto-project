@@ -1,9 +1,48 @@
-let openPopup = document.querySelector('.popup_opened');
-let popup = document.querySelector('.popup');
+
+// 1 вареант
+
+let openPopup = document.querySelector('.profile__button-edit');
+let popup = document.querySelector('body > .popup');
+let closePopup = document.querySelector('.popup__close');
 
 openPopup.addEventListener('click', function() {
     popup.classList.add('popup_opened');
 })
+
+closePopup.addEventListener('click', function() {
+    popup.classList.remove('popup_opened');
+})
+
+
+
+
+// 2 вареант
+
+
+/* let openPopup = document.querySelector('.profile__button-edit');
+let closePopup = document.querySelector('.popup__close');
+let popup = document.querySelector('.popup');
+
+
+
+function toggleClass() {
+popup.classList.toggle('popup_opened');
+nameInput.value = profileTitle.textContent;
+jobInput.value = profileTitle.textContent;
+}
+
+
+
+openPopup.addEventListener('click', toggleClass);
+closePopup/addEventListener('click', toggleClass);
+
+ */
+
+
+// 3 вареант
+
+
+
 /* alert('Hello') */
 /* console.log('helo');
 function sayHello(name) {
@@ -14,7 +53,7 @@ let greeting = 'Привет, ' + name;
 return greeting;
 }
 */
-const button = document.querySelector('.button')
+/* const button = document.querySelector('.button')
 const result = document.querySelector('.result')
 
 const opened = document.querySelector('.popup_opened')
@@ -23,7 +62,7 @@ function openpupup (item) {
 item.classlist('.popup_opened')
 document.removeEventListener('keydowb', closepopupbyesc)
 }
-
+ */
 /* .then(res => res.json())
 .then(res => console.log(res))
 addEventListener( ) */
