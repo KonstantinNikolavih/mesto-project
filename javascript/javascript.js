@@ -1,9 +1,9 @@
 
 // 1 вареант
 
-let openPopup = document.querySelector('.profile__button-edit');
-let popup = document.querySelector('.popup');
-let closePopup = document.querySelector('.popup__close');
+const openPopup = document.querySelector('.profile__button-edit');
+const popup = document.querySelector('.popup');
+const closePopup = document.querySelector('.popup__close');
 
 openPopup.addEventListener('click', function() {
     popup.classList.add('popup_opened');
@@ -24,7 +24,27 @@ popup.addEventListener('click', function(event) {
 
 
 // 2 вареант
+/*
+const openPopup = document.querySelector('.profile__button-add');
+const popup = document.querySelector('.popup');
+const closePopup = document.querySelector('.popup__close');
 
+openPopup.addEventListener('click', function() {
+    popup.classList.add('nev_card');
+})
+
+closePopup.addEventListener('click', function() {
+    popup.classList.remove('nev_card');
+})
+
+
+popup.addEventListener('click', function(event) {
+  if (event.target === event.currentTarget) {
+    popup.classList.toggle('nev_card');
+  }
+
+})
+ */
 
 /* let openPopup = document.querySelector('.profile__button-edit');
 let closePopup = document.querySelector('.popup__close');
