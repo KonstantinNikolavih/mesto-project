@@ -21,17 +21,6 @@ popup.addEventListener('click', function(event) {
 
 })
 
-/* let imageOnPage = document.querySelector('img');
-mageOnPage.getAttribute('src');
-console.log('') */
-
-// 2 вареант
-
-/* const openPopup = document.querySelector('.profile__button-add');
-const popup = document.querySelector('.popup');
-const closePopup = document.querySelector('.popup__close');
- */
-
 //тест формы для сохрпанения
 
 const formElement = document.querySelector('.popup__input');
@@ -39,16 +28,25 @@ const formElement = document.querySelector('.popup__input');
 const nameInput = document.querySelector('.profile__name');
 const jobInput = document.querySelector('.profile__occupation');
 
+const save = document.querySelector('.popup__button-save');
+
 function formSubmitHandler (evt) {
   evt.preventDefault();
   nameInput.textConter = nameInput.Value;
   jobInput.textConter = jobInput.Value;
-
+  save;
 }
   formElement.addEventListener('submit', formSubmitHandler);
 
 //---
 
+
+// 2 вареант
+
+/* const openPopup = document.querySelector('.profile__button-add');
+const popup = document.querySelector('.popup');
+const closePopup = document.querySelector('.popup__close');
+ */
 
 /* openPopup.addEventListener('click', function() {
     popup.classList.add('nav_card');
