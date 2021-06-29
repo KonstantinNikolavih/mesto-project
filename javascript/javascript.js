@@ -1,7 +1,7 @@
 
 // 1 вареант
 
-const openPopup = document.querySelector('.profile__button-edit');
+/* const openPopup = document.querySelector('.profile__button-edit');
 const popup = document.querySelector('.popup');
 const closePopup = document.querySelector('.popup__close');
 
@@ -20,31 +20,33 @@ popup.addEventListener('click', function(event) {
   }
 
 })
-
-
+ */
+/* let imageOnPage = document.querySelector('img');
+mageOnPage.getAttribute('src');
+console.log('') */
 
 // 2 вареант
-/*
+
 const openPopup = document.querySelector('.profile__button-add');
 const popup = document.querySelector('.popup');
 const closePopup = document.querySelector('.popup__close');
 
 openPopup.addEventListener('click', function() {
-    popup.classList.add('nev_card');
+    popup.classList.add('nav_card');
 })
 
 closePopup.addEventListener('click', function() {
-    popup.classList.remove('nev_card');
+    popup.classList.remove('nav_card');
 })
 
 
 popup.addEventListener('click', function(event) {
   if (event.target === event.currentTarget) {
-    popup.classList.toggle('nev_card');
+    popup.classList.toggle('nav_card');
   }
 
 })
- */
+
 
 /* let openPopup = document.querySelector('.profile__button-edit');
 let closePopup = document.querySelector('.popup__close');
