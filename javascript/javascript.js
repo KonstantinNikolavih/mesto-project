@@ -32,8 +32,8 @@ const save = document.querySelector('.popup__button-save');
 
 function formSubmitHandler (evt) {
   evt.preventDefault();
-  nameInput.textConter = nameInput.Value;
-  jobInput.textConter = jobInput.Value;
+  nameInput.textContent = nameInput.Value;
+  jobInput.textContent = jobInput.Value;
   save;
 }
   formElement.addEventListener('submit', formSubmitHandler);
