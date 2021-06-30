@@ -64,25 +64,25 @@ function formSubmitHandler (evt) {
 
 // 2 вареант
 
-/* const openPopupAdd = document.querySelectorAdd('.profile__button-add');
-const popupAdd = document.querySelectorAdd('.popup');
-const closePopupAdd = document.querySelectorAdd('.popup__close');
+const openPopup = document.querySelector('.profile__button-add');
+const popup = document.querySelector('.popup');
+const closePopup = document.querySelector('.popup__close');
 
 
- openPopupAdd.addEventListener('click', function() {
-    popupAdd.classList.add('nav_card');
+ openPopup.addEventListener('click', function() {
+    popup.classList.add('nav_card');
 })
 
-closePopupAdd.addEventListener('click', function() {
-    popupAdd.classList.remove('nav_card');
+closePopup.addEventListener('click', function() {
+    popup.classList.remove('nav_card');
 })
 
 
-popupAdd.addEventListener('click', function(event) {
+popup.addEventListener('click', function(event) {
   if (event.target === event.currentTarget) {
     popup.classList.toggle('nav_card');
   }
 
 })
- */
+
 
