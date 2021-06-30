@@ -1,0 +1,5 @@
+.popup_openedd {
+  display: flex;
+  transition: all 0.5s 0.3s;
+  opacity: 1;
+ }
