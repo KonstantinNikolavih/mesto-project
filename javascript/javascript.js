@@ -65,8 +65,8 @@ function formSubmitHandler (evt) {
 // 2 вареант
 
 const openPopupAdd = document.querySelector('.profile__button-add');
-const popupAdd = document.querySelector('.popup');
-const closePopupAdd = document.querySelector('.popup__close');
+const popupAdd = document.querySelector('.popupn');
+const closePopupAdd = document.querySelector('.popup__closen');
 
 
  openPopupAdd.addEventListener('click', function() {
