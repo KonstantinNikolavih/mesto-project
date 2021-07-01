@@ -38,6 +38,8 @@ const formElement = document.querySelector('.popup__input');
 
 const nameInput = document.querySelector('.profile__name');
 const jobInput = document.querySelector('.profile__occupation');
+const nameInpu = document.querySelector('.popup__item_name');
+const jobInpu = document.querySelector('.popup__item_occupation');
 // сохранение редактированого профиля
 
 const save = document.querySelector('.popup__button-save');
@@ -50,8 +52,9 @@ save.addEventListener('click', function() {
 
 function formSubmitHandler (evt) {
   evt.preventDefault();
-  nameInput.textContent = nameInput.value;
-  jobInput.textContent = jobInput.value;
+  nameInput.textContent = nameInpu.value;
+  jobInput.textContent = jobInpu.value;
+  /* console.log('nameInput'); */
   popup.classList.toggle('popup_opened');
 
 }
@@ -64,7 +67,7 @@ function formSubmitHandler (evt) {
 
 // 2 вареант
 
-const openPopupAdd = document.querySelector('.profile__button-add');
+/* const openPopupAdd = document.querySelector('.profile__button-add');
 const popupAdd = document.querySelector('.popupn');
 const closePopupAdd = document.querySelector('.popup__closen');
 
@@ -83,6 +86,7 @@ popupAdd.addEventListener('click', function(event) {
     popupAdd.classList.toggle('nav_card');
   }
 
-})
+}) */
+
 
 
