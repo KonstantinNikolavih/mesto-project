@@ -54,7 +54,7 @@ function formSubmitHandler (evt) {
   evt.preventDefault();
   nameInput.textContent = nameInpu.value;
   jobInput.textContent = jobInpu.value;
-  /* console.log('nameInput'); */
+
   popup.classList.toggle('popup_opened');
 
 }
@@ -65,28 +65,53 @@ function formSubmitHandler (evt) {
 //---
 
 
-// 2 вареант
+// 2 popup добавление карточки
 
-/* const openPopupAdd = document.querySelector('.profile__button-add');
-const popupAdd = document.querySelector('.popupn');
-const closePopupAdd = document.querySelector('.popup__closen');
+const openPopupCard = document.querySelector('.profile__button-add');
+const popupCard = document.querySelector('.popup-card');
+const closePopupCard = document.querySelector('.popup__close-card');
 
 
- openPopupAdd.addEventListener('click', function() {
-    popupAdd.classList.add('nav_card');
+ openPopupCard.addEventListener('click', function() {
+    popupCard.classList.add('nav_card');
 })
 
-closePopupAdd.addEventListener('click', function() {
-    popupAdd.classList.remove('nav_card');
+closePopupCard.addEventListener('click', function() {
+    popupCard.classList.remove('nav_card');
 })
 
 
-popupAdd.addEventListener('click', function(event) {
+popupCard.addEventListener('click', function(event) {
   if (event.target === event.currentTarget) {
-    popupAdd.classList.toggle('nav_card');
+    popupCard.classList.toggle('nav_card');
   }
 
-}) */
+})
+
+// добовление карточки
+const listElement = document.querySelector('.elements__list');
+
+const nameElements = document.querySelector('.elements__title');
+const imgElements = document.querySelector('.elements__img');
+const nameItem = document.querySelector('.popup__item-card-name');
+const imgItem = document.querySelector('.popup__item-card-img');
+// сохранение редактированого профиля
+
+const saveCard = document.querySelector('.popup__button-save-card');
+
+saveCard.addEventListener('click', function() {
+  formElement.classList.remove('popup__button-save-card');
+})
 
 
+
+function formSubmitHandler (evt) {
+  evt.preventDefault();
+  nameElements.textContent = nameItem.value;
+  imgElements.textContent = imgItem.value;
+
+  popup.classList.toggle('nav_card');
+
+}
+  listElement.addEventListener('submit', formSubmitHandler);
 
