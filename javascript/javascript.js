@@ -1,3 +1,4 @@
+
 // карточки для добавления
 const initialCards = [
   {
@@ -100,8 +101,8 @@ function formSubmitHandler (evt) {
 // 2 popup добавление карточки
 
 const openPopupCard = document.querySelector('.profile__button-add');
-const popupCard = document.querySelector('.popup-card');
-const closePopupCard = document.querySelector('.popup__close-card');
+const popupCard = document.querySelector('.popup-card-nov');
+const closePopupCard = document.querySelector('.popup__close-card-nov');
 
 
  openPopupCard.addEventListener('click', function() {
@@ -147,3 +148,15 @@ function formSubmitHandler (evt) {
 }
   listElement.addEventListener('submit', formSubmitHandler);
  */
+
+// 3 popup ccard картинки
+const card = document.querySelector('.elements__img');
+const openCard = document.querySelector('.elements__item');
+const closeCard = document.querySelector('.popup__close-card');
+
+openCard.addEventListener('click', function() {
+  card.classList.add('popup_cards');
+})
+closeCard.addEventListener('click', function() {
+  card.classList.remove('popup_cards');
+})
