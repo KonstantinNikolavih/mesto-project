@@ -1,11 +1,16 @@
 
-// 1 вареант открытие popup
+// 1 popup profile
 
 const openPopup = document.querySelector('.profile__button-edit');
 const popup = document.querySelector('.popup');
 const closePopup = document.querySelector('.popup__close');
 
-
+// всплывающее окго
+/* const pop = document.querySelector('.popup_opened-spl');
+openPopup.addEventListener('click', function() {
+  pop.classList.add('profile__button-edit');
+  console.log('pop');
+})*/
 
 // переменная.команда(событие) функция перехвата команды
 openPopup.addEventListener('click', function() {
@@ -89,7 +94,7 @@ popupCard.addEventListener('click', function(event) {
 })
 
 // добовление карточки
-const listElement = document.querySelector('.elements__list');
+/* const listElement = document.querySelector('.elements__list');
 
 const nameElements = document.querySelector('.elements__title');
 const imgElements = document.querySelector('.elements__img');
@@ -108,10 +113,10 @@ saveCard.addEventListener('click', function() {
 function formSubmitHandler (evt) {
   evt.preventDefault();
   nameElements.textContent = nameItem.value;
-  imgElements.textContent = imgItem.value;
+  imgElements.шьл = imgItem.add;
 
   popup.classList.toggle('nav_card');
 
 }
   listElement.addEventListener('submit', formSubmitHandler);
-
+ */
