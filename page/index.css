@@ -19,6 +19,7 @@
 
 @import url(../blocks/elements/__list/elements__list.css);
 @import url(../blocks/elements/elements.css);
+@import url(../blocks/elements/__dele/elements__dele.css);
 @import url(../blocks/elements/__group/elements__group.css);
 @import url(../blocks/elements/__img/elements__img.css);
 @import url(../blocks/elements/__item/elements__item.css);
