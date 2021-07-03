@@ -159,4 +159,20 @@ openCard.addEventListener('click', function() {
 })
 closeCard.addEventListener('click', function() {
   card.classList.remove('popup_cards');
-})
+});
+
+
+// тестовый шаблон
+
+ /*  function addSong(artistValue, titleValue) {
+    const songTemplate = document.querySelector('#song-template').content;
+    const songElement = songTemplate.querySelector('.song').cloneNode(true);*/
+
+    groupElement.querySelector('.elements__group').textContent = artistValue;
+    songElement.querySelector('.song__title').textContent = titleValue;
+
+  // лайк картинки
+groupElement.querySelector('.elements__group').addEventListener('click', function (evt) {
+  evt.target.classList.toggle('elements__group_active');
+  });
+
