@@ -1,42 +1,47 @@
 const container = document.querySelector('.elements');
 const songsContainer = container.querySelector('.elements__item');
 const addButton = container.querySelector('.profile__button-add');
-const resetButton = container.querySelector('.elements__del');
-const noSongsElement = container.querySelector('.no-songs');
+const resetButton = container.querySelector('.elements__dele');
+const noSongsElement = container.querySelector('.elements__list');
 
-function renderHasSongs() {
+//очистить лист
+/* function renderHasSongs() {
   resetButton.removeAttribute('disabled');
-  resetButton.classList.remove('input__btn_disabled');
+  resetButton.classList.remove('elements__dele');
   noSongsElement.classList.add('no-songs_hidden');
-}
+} */
 
+//
 function renderNoSongs() {
   resetButton.setAttribute('disabled', true);
-  resetButton.classList.add('input__btn_disabled');
+  resetButton.classList.add('elements__dele');
   noSongsElement.classList.remove('no-songs_hidden');
 }
 
-function addSong(artistValue, titleValue) {
-  const songTemplate = document.querySelector('#song-template').content;
-  const songElement = songTemplate.querySelector('.song').cloneNode(true);
+function addSong(imgValue, titleValue) {
+  const songTemplate = document.querySelector('.elements__item').content;
+  const songElement = document.querySelector('.elements__item').cloneNode(true);
 
-  songElement.querySelector('.song__artist').textContent = artistValue;
-  songElement.querySelector('.song__title').textContent = titleValue;
+
+  // добовление текста и картинки для popup
+  songElement.querySelector('.elements__img').imgContent = imgValue;
+  songElement.querySelector('.elements__title').textContent = titleValue;
 
 
 
 
   //лайк
-  songElement.querySelector('.song__like').addEventListener('click', function (evt) {
-    evt.target.classList.toggle('song__like_active');
+  songElement.querySelector('.elements__group').addEventListener('click', function (evt) {
+    evt.target.classList.toggle('elements__group_active');
 
 
 
   });
     songsContainer.append(songElement);
 }
+// добавленте текста и картинок
 
-addButton.addEventListener('click', function () {
+/*   addButton.addEventListener('click', function () {
   const artist = document.querySelector('.input__text_type_artist');
   const title = document.querySelector('.input__text_type_title');
 
@@ -55,4 +60,4 @@ resetButton.addEventListener('click', function () {
   }
 
   renderNoSongs();
-});
+}); */
