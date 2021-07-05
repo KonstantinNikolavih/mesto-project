@@ -11,6 +11,88 @@ const noSongsElement = container.querySelector('.elements__list');
   noSongsElement.classList.add('no-songs_hidden');
 } */
 
+// 1 popup profile
+
+const openPopup = document.querySelector('.profile__button-edit');
+const popup = document.querySelector('.popup');
+const closePopup = document.querySelector('.popup__close');
+
+// всплывающее окго
+/* const pop = document.querySelector('.popup_opened-spl');
+openPopup.addEventListener('click', function() {
+  pop.classList.add('profile__button-edit');
+  console.log('pop');
+})*/
+
+// переменная.команда(событие) функция перехвата команды
+openPopup.addEventListener('click', function() {
+    popup.classList.add('popup_opened');
+})
+
+closePopup.addEventListener('click', function() {
+    popup.classList.remove('popup_opened');
+})
+
+
+
+popup.addEventListener('click', function(event) {
+  if (event.target === event.currentTarget) {
+    popup.classList.toggle('popup_opened');
+  }
+
+})
+
+//тест формы для сохрпанения
+const formElement = document.querySelector('.popup__input');
+
+const nameInput = document.querySelector('.profile__name');
+const jobInput = document.querySelector('.profile__occupation');
+const nameInpu = document.querySelector('.popup__item_name');
+const jobInpu = document.querySelector('.popup__item_occupation');
+// сохранение редактированого профиля
+
+const save = document.querySelector('.popup__button-save');
+
+save.addEventListener('click', function() {
+  formElement.classList.remove('popup__button-save');
+})
+
+
+function formSubmitHandler (evt) {
+  evt.preventDefault();
+  nameInput.textContent = nameInpu.value;
+  jobInput.textContent = jobInpu.value;
+
+  popup.classList.toggle('popup_opened');
+
+}
+  formElement.addEventListener('submit', formSubmitHandler);
+
+
+
+  // 2 popup добавление карточки
+
+const openPopupCard = document.querySelector('.profile__button-add');
+const popupCard = document.querySelector('.popup-card-nov');
+const closePopupCard = document.querySelector('.popup__close-card-nov');
+
+
+ openPopupCard.addEventListener('click', function() {
+    popupCard.classList.add('nav_card');
+})
+
+closePopupCard.addEventListener('click', function() {
+    popupCard.classList.remove('nav_card');
+})
+
+
+popupCard.addEventListener('click', function(event) {
+  if (event.target === event.currentTarget) {
+    popupCard.classList.toggle('nav_card');
+  }
+
+})
+
 //
 /*
 function renderNoSongs() {
@@ -100,17 +182,85 @@ const items = [
 
 const itemTemplate = document.querySelector('.item_template');
 const list = document.querySelector('.elements__list');
-const formButton = document.querySelector('.profile__button-add');
+const formButton = document.querySelector('.popup__button-save-card');
 /* const resetButton = container.querySelector('.elements__dele'); */
 const formInput = document.querySelector('.elements__list');
 
 
-
+//test
 function renderItem() {
   items.forEach(renderItem);
 }
 
+
 function renderItem(text) {
+  const li = document.createElement('li');
+  li.classList.add('.elements__item');
+
+  const h4 = document.createElement('h4');
+  h4.innerText = text;
+  h4.classList.add('elements__title');
+
+  li.appendChild(h4);
+  const imgEdit = document.createElement('img');
+  imgEdit.setAttribute('src', '.popup__item-card-occupation');
+  li.appendChild(imgEdit);
+  list.appendChild(li);
+//
+
+ /*  const imgDupl = document.createElement('img');
+  imgDupl.setAttribute('src', '') */
+
+ /*  const imgDel = document.createElement('img');
+  imgDel.setAttribute('src', 'images/kirill-pershin-1088404-unsplash.png');
+  li.appendChild(imgEdit); */
+
+
+
+
+
+
+}
+//рабочий вареант с косяками
+/* function renderItem() {
+  items.forEach(renderItem);
+}
+
+
+function renderItem(text) {
+  const li = document.createElement('li');
+  li.classList.add('.elements__item');
+
+  const h4 = document.createElement('h4');
+  h4.innerText = text;
+  h4.classList.add('elements__title');
+
+  li.appendChild(h4);
+  const imgEdit = document.createElement('img');
+  imgEdit.setAttribute('src', 'images/kirill-pershin-1088404-unsplash.png');
+  li.appendChild(imgEdit);
+  list.appendChild(li);
+}
+ */
+
+
+
+function handleSubmit() {
+  renderItem(formInput.value);
+}
+
+formButton.addEventListener('click', handleSubmit);
+
+renderItem();
+
+
+//template
+/* function renderItem() {
+  items.forEach(renderItem);
+}
+
+function renderItem(text) {
+  console.log('renderItem')
   const htmlElement = itemTemplate.cloneNode(true);
   htmlElement.querySelector('.elements__title').innerText = text;
 
@@ -133,7 +283,10 @@ function setEventListeners(element) {
 
 formButton.addEventListener('click', handleSubmit);
 
-renderItem();
+renderItem(); */
+//
+
+
 
 
 
