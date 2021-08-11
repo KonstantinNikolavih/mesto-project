@@ -1,15 +1,35 @@
-/* const container = document.querySelector('.elements');
-const songsContainer = container.querySelector('.elements__item');
-const addButton = container.querySelector('.profile__button-add');
-const resetButton = container.querySelector('.elements__dele');
-const noSongsElement = container.querySelector('.elements__list');
+const initialCards = [
+  {
+    name: 'Карачаевск',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
+  },
+  {
+    name: 'Гора Эльбрус',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
+  },
+  {
+    name: 'Домбай',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
+  },
+  {
+    name: 'Камчатка',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
+  },
+  {
+    name: 'Холмогорский район',
+    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
+  },
+  {
+    name: 'Карачаево-Черкасово',
+    link: ''
+  },
+  {
+    name: 'Рунетка',
+    link: ''
+  }
+];
 
-//очистить лист
-/* function renderHasSongs() {
-  resetButton.removeAttribute('disabled');
-  resetButton.classList.remove('elements__dele');
-  noSongsElement.classList.add('no-songs_hidden');
-} */
+
 
 // 1 popup profile
 
@@ -25,22 +45,43 @@ openPopup.addEventListener('click', function() {
 })*/
 
 // переменная.команда(событие) функция перехвата команды
-openPopup.addEventListener('click', function() {
+ openPopup.addEventListener('click', function() {
     popup.classList.add('popup_opened');
 })
+// 2 вареант открытия // имя функции и {инструкции}
+/* function openPopup(item) {
+  item.classList.add('popup_opened');
+}*/
+// вызов функции // (параметры)
+/* openPopup() */
 
 closePopup.addEventListener('click', function() {
     popup.classList.remove('popup_opened');
 })
 
 
-
+// закрытие popup за границей контейнера
+// наложить слушитель addEventListener
 popup.addEventListener('click', function(event) {
   if (event.target === event.currentTarget) {
     popup.classList.toggle('popup_opened');
   }
+ })
 
-})
+
+
+
+//добовление карточек
+
+/* initialCards.reverse().forEach(addInitialCards);
+/* }) */
+/*
+function addInitialCards(element) {
+  addCards(createCard(element.name, element.link));
+
+}*/
+//
+
 
 //тест формы для сохрпанения
 const formElement = document.querySelector('.popup__input');
@@ -93,236 +134,165 @@ popupCard.addEventListener('click', function(event) {
 
 })
 
-//
-/*
-function renderNoSongs() {
-  resetButton.setAttribute('disabled', true);
-  resetButton.classList.add('elements__dele');
-  noSongsElement.classList.remove('no-songs_hidden');
+
+
+const photoTemplate = document.querySelector('.item_template').content;
+const photoList = document.querySelector('.elements__list');
+
+
+//добовления масива
+function addCards(card) {
+  photoList.prepend(card);
 }
 
-function addSong(imgValue, titleValue) {
-  const songTemplate = document.querySelector('.elements__item').content;
-  const songElement = document.querySelector('.elements__item').cloneNode(true);
 
 
-  // добовление текста и картинки для popup
-  songElement.querySelector('.elements__img').src = imgValue;
-  songElement.querySelector('.elements__title').textContent = titleValue;
+initialCards.reverse().forEach(addInitialCards);
+function addInitialCards(element) {
+  addCards(createCard(element.name, element.link));
+
+}
+function createCard(title, image){
+// переменые для card template
+const elementImg = photoTemplate.querySelector('.elements__item').cloneNode(true);
+const cardImage = photoTemplate.querySelector('.elements__img');
+const elementsTitle = elementImg.querySelector('.elements__title');
+
+elementImg.textContent = title;
+elementImg.src = image;
+elementsTitle.title = title;
+
+  /* deletePhotoListeners(elementImg);
+  likePhotoListeners(elementImg); */
+  /* openPopupCardsListeners(elementImg); */
+  return elementImg;
+};
+
+/* const elementsImg = document.querySelector('.elements__img'); */
+
+
+// 1 вареант
+// добовление переменых для текста и картинки
+const nameCard = document.querySelector('.popup__item-card-name');
+const occupationCard = document.querySelector('.popup__item-card-occupation');
+
+// добовление переменых для новых карточек текста и картинок
+const elementsImgCard = document.querySelector('.elements__img_card');
+const elementsTitleCard = document.querySelector('.elements__title_card');
+
+// добовление текста для создания карточки
 
 
 
+// Сохранения новой карточки
+const saveCard = document.querySelector('.popup__button-save-card');
+// тест функции и переменой при вызове в параметрах
+const popupCardWidth = document.querySelector('.popup__card_width');
 
-  //лайк
-  songElement.querySelector('.elements__group').addEventListener('click', function (evt) {
-    evt.target.classList.toggle('elements__group_active');
-
-
-
-  });
-    songsContainer.append(songElement);
-} */
-
-
-
-
-// добавленте текста и картинок
-
-/*   addButton.addEventListener('click', function () {
-  const artist = document.querySelector('.input__text_type_artist');
-  const title = document.querySelector('.input__text_type_title');
-
-  addSong(artist.value, title.value);
-  renderHasSongs();
-
-  artist.value = '';
-  title.value = '';
-});
-
-resetButton.addEventListener('click', function () {
-  const songs = document.querySelectorAll('.song')
-
-  for (let i = 0; i < songs.length; i++) {
-    songs[i].remove();
-  }
-
-  renderNoSongs();
+saveCard.addEventListener('click', function() {
+  formElement.classList.remove('popup__button-save-card');
+})
+// form для добавления карты и сброс карты и закрытие popup
+/* popupInputCard.addEventListener('submit', function (evt) {
+  evt.preventDefault()
+  addCards({
+    name: popupItemCardName.value,
+    link: popupItemCardOccupation.value
+  })
+  popupInputCard.reset()
+  openPopupCardImgl(popupCard)
 }); */
 
-
-const items = [
-  {
-    name: 'Карачаевск',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg'
-  },
-  {
-    name: 'Гора Эльбрус',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg'
-  },
-  {
-    name: 'Домбай',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg'
-  },
-  {
-    name: 'Камчатка',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg'
-  },
-  {
-    name: 'Холмогорский район',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg'
-  },
-  {
-    name: 'Байкал',
-    link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
-  }
-];
-
-
-
-
-const itemTemplate = document.querySelector('.item_template');
-const list = document.querySelector('.elements__list');
-const formButton = document.querySelector('.popup__button-save-card');
-/* const resetButton = container.querySelector('.elements__dele'); */
-const formInput = document.querySelector('.elements__list');
-
-
-//test
-function renderItem() {
-  items.forEach(renderItem);
-}
-
-
-function renderItem(text) {
-  const li = document.createElement('li');
-  li.classList.add('.elements__item');
-
-  const h4 = document.createElement('h4');
-  h4.innerText = text;
-  h4.classList.add('elements__title');
-
-  li.appendChild(h4);
-  const imgEdit = document.createElement('img');
-  imgEdit.setAttribute('src', '.popup__item-card-occupation');
-  li.appendChild(imgEdit);
-  list.appendChild(li);
-//
-
- /*  const imgDupl = document.createElement('img');
-  imgDupl.setAttribute('src', '') */
-
- /*  const imgDel = document.createElement('img');
-  imgDel.setAttribute('src', 'images/kirill-pershin-1088404-unsplash.png');
-  li.appendChild(imgEdit); */
-
-
-
-
-
-
-}
-//рабочий вареант с косяками
-/* function renderItem() {
-  items.forEach(renderItem);
-}
-
-
-function renderItem(text) {
-  const li = document.createElement('li');
-  li.classList.add('.elements__item');
-
-  const h4 = document.createElement('h4');
-  h4.innerText = text;
-  h4.classList.add('elements__title');
-
-  li.appendChild(h4);
-  const imgEdit = document.createElement('img');
-  imgEdit.setAttribute('src', 'images/kirill-pershin-1088404-unsplash.png');
-  li.appendChild(imgEdit);
-  list.appendChild(li);
-}
- */
-
-
-
-function handleSubmit() {
-  renderItem(formInput.value);
-}
-
-formButton.addEventListener('click', handleSubmit);
-
-renderItem();
-
-
-//template
-/* function renderItem() {
-  items.forEach(renderItem);
-}
-
-function renderItem(text) {
-  console.log('renderItem')
-  const htmlElement = itemTemplate.cloneNode(true);
-  htmlElement.querySelector('.elements__title').innerText = text;
-
-  setEventListeners(htmlElement);
-
-  list.appendChild(htmlElement);
-}
-
-function handleSubmit() {
-  renderItem(formInput.value);
-}
-
-function handledelete(evt) {
-  evt.target.closest('.elements__item').remove();
-}
-
-function setEventListeners(element) {
-  element.querySelector('.delete').addEventListener('click', handledelete);
-}
-
-formButton.addEventListener('click', handleSubmit);
-
-renderItem(); */
-//
-
-
-
-
-
-//очистить лист
-/* function renderHasSongs() {
-  resetButton.removeAttribute('disabled');
-  resetButton.classList.remove('elements__dele');
-  noSongsElement.classList.add('no-songs_hidden');
+//добовление карточки
+/* function navCard() {
+  openPopup(popupCard);
+  cardImage.value = elementsTitleCard.textContent;
+  cardImage.value = elementsImgCard.src;
 } */
 
-//
-/* function renderNoSongs() {
-  resetButton.setAttribute('disabled', true);
-  resetButton.classList.add('elements__dele');
-  noSongsElement.classList.remove('no-songs_hidden');
+// 2 вареант
+//Открытие popup с картинкой
+ /* function openPopupCards(evt) {
+  console.log(openPopupCards) */
+ /*  cardImage.addEventListener('click', () => {
+  elementsImgCard.src = evt.target.closest('.elements__img').src;
+  elementsImgCard.alt = evt.target.closest('.elements__img').alt;
+  elementsTitleCard.textContent = evt.target.closest('.elements__item').textContent;
+  openPopupCards(popupCardWidth); */
+
+/* }); */
+
+// тест функции и переменой при вызове в параметрах
+/*const popupCardWidth = document.querySelector('.popup__card_width');
+// temlate вызываем
+function openPopupCards(card, item) {
+  card.querySelector('.elements__img').addEventListener('click', (card) => {
+    openPopup(popupCardWidth);
+
+  console.log(openPopupCards)
+  elementsImgCard.src = item.link;
+  elementsImgCard.alt = item.name;
+  elementsTitleCard.textContent = item.name;
+ /*  openPopupCards(); */
+
+
+/*
+function openPopupCardsListeners(element) {
+  element.querySelector('.elements__img').addEventListener('click', openPopupCards);
 }
-
-function addSong(imgValue, titleValue) {
-  const songTemplate = document.querySelector('.elements__item').content;
-  const songElement = document.querySelector('.elements__item').cloneNode(true);
-
-
-  // добовление текста и картинки для popup
-  songElement.querySelector('.elements__img').src = imgValue;
-  songElement.querySelector('.elements__title').textContent = titleValue;
+// добовление из массива
+function createCards() {
+  initialCards.forEach(element => {
+    prependCard(elements, addCards(element.name, element.link))
+    })
+  }
+document.addEventListener('DOMContentLoaded', createCards()) */
 
 
 
+// 3 вареант
+// открытие popup с картинкой
+/* const subtitle = document.querySelector(".popup__subtitle");
+const popupCardWidth = document.querySelector('.popup__card_width');// карточка для большой фотографии
 
-  //лайк
-  songElement.querySelector('.elements__group').addEventListener('click', function (evt) {
-    evt.target.classList.toggle('elements__group_active');
+function openPopupCards(card, item) {
+  card.querySelector(".elements__img").addEventListener("click", (card) => {
+    openPopup(popupCardWidth);
 
 
+
+    cardImage.src = item.link;
+    cardImage.alt = item.name;
+    subtitle.textContent = item.name;
 
   });
-    songsContainer.append(songElement);
 }
  */
+
+
+//удаление карточки версия 2
+/* function deletePhoto(item) {
+  item.querySelector('.elements__dele');
+  item.addEventListener('click', (evt) => {
+    evt.target.closest('.elements__item').remove();
+  });
+
+} */
+
+
+//Функция удаления фотокарточки
+function deletePhoto (evt) {
+evt.target.closest('.elements__item').remove();
+}
+function deletePhotoListeners(element) {
+  element.querySelector('.elements__dele').addEventListener('click', deletePhoto);
+}
+
+
+//лайк
+function likePhoto (evt) {
+  evt.target.classList.toggle('elements__group_active');
+}
+function likePhotoListeners(element) {
+  element.querySelector('.elements__group').addEventListener('click', likePhoto);
+}
