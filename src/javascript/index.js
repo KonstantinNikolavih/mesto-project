@@ -1,19 +1,8 @@
 // index.js
 import '../page/index.css'; // добавьте импорт главного файла стилей
 
-import {popupPofile, popupEditProfile, popupEditProfileClose, popup, formElement, profileNameElement, profileJobElement, nameInput, jobInput, save, openPopupCard, popupCard, closePopupCard, } from './utils';
-
-// function открытие popup
- function openPopup(popup) {
-  popup.classList.add("popup_opened");
-  addClosePopupEsc();
- }
-
-// function закрытие popup
-function closePopup(popup) {
-  popup.classList.remove("popup_opened");
-  removeClosePopupEsc();
- }
+import {popupPofile, popupEditProfile, popupEditProfileClose, popup, formElement, profileNameElement, profileJobElement, nameInput, jobInput, save, openPopupCard, popupCard, closePopupCard, elementList, openPopupCardImg, popupCardImg, closePopupCardImg, elementsTitleCard, popupInputCard, popupItemCardName, popupItemCardJob, photoTemplat, cardElement, elementsImg, elementsTitl, elementsGroup, elementsDele,} from './utils';
+import {openPopup, closePopup} from './modal';
 
  // открытие
  popupEditProfile.addEventListener('click', function() {
@@ -82,27 +71,15 @@ closePopupCard.addEventListener('click', function() {
   closePopup(popupCard)
 })
 
-
-
-
-// переменые popup card img
-const elementList = document.querySelector('.elements__list');
-
-const openPopupCardImg = document.querySelector('.elements__img_card');
-const popupCardImg = document.querySelector('.popup__card_img');
-const closePopupCardImg = popupCardImg.querySelector('.popup__close');
-// переменые popup card img // cart title
-const elementsTitleCard = document.querySelector('.elements__title_card');
-
 // закрытие 3 popup
 closePopupCardImg.addEventListener('click', function() {
   closePopup(popupCardImg)
 })
 
 // добовление перемены с карточкими
-const popupInputCard = document.querySelector('.popup__input_card');
+/* const popupInputCard = document.querySelector('.popup__input_card');
 const popupItemCardName = document.querySelector('.popup__item-card-name');
-const popupItemCardJob = document.querySelector('.popup__item-card-occupation');
+const popupItemCardJob = document.querySelector('.popup__item-card-occupation'); */
 // обшие переменые для функции добовления карточки
   function parametrCard(card) {
 // template карточки
