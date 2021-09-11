@@ -17,3 +17,23 @@ export const nameInput = document.querySelector('.popup__item_name');
 export const jobInput = document.querySelector('.popup__item_occupation');
 // кнопка пременой для сохранение редактированого профиля
 export const save = document.querySelector('.popup__button-save');
+// переменые popup card img
+export const elementList = document.querySelector('.elements__list');
+export const openPopupCardImg = document.querySelector('.elements__img_card');
+export const popupCardImg = document.querySelector('.popup__card_img');
+export const closePopupCardImg = popupCardImg.querySelector('.popup__close');
+// переменые popup card img // cart title
+export const elementsTitleCard = document.querySelector('.elements__title_card');
+// добовление перемены с карточкими
+export const popupInputCard = document.querySelector('.popup__input_card');
+export const popupItemCardName = document.querySelector('.popup__item-card-name');
+export const popupItemCardJob = document.querySelector('.popup__item-card-occupation');
+// template карточки
+// обшие переменые для функции добовления карточки
+export const photoTemplat = document.querySelector('.item_template').content;
+export const cardElement = photoTemplat.querySelector('.elements__item').cloneNode(true);
+export const elementsImg = cardElement.querySelector('.elements__img');
+export const elementsTitl = cardElement.querySelector('.elements__title');
+export const elementsGroup = cardElement.querySelector('.elements__group');
+export const elementsDele = cardElement.querySelector('.elements__dele');
+

@@ -1,11 +1,10 @@
 //форма валидации
-export
- function enableValidation() {
+function enableValidation() {
   const form = document.querySelector('.popup__input');
   form.addEventListener('submit', handleFormSubmit);
   form.addEventListener('input', handleFormInput);
 
-  const formCard = document.querySelector('.popup__input_card');
+const formCard = document.querySelector('.popup__input_card');
   formCard.addEventListener('submit', handleFormSubmit);
   formCard.addEventListener('input', handleFormInput);
 }
@@ -37,15 +36,6 @@ function handleFormInput (event) {
 function setCustomError(input) {
   const validity = input.validity;
   input.setCustomValidity("");
-
-  /* if (validity.tooShort || validity.tooLong) {
-     const currentLength = input.value.length;
-     const min = input.getAttribute("minlength");
-     const max = input.getAttribute("maxlength");
-    input.setCustomValidity(
-        `Вы пропустили это поле. Введено ${currentLength}, а должно быть от ${min} до ${max}`
-   );
-  } */
   if (validity.typeMismatch) {
     input.setCustomValidity('Ведите адрес сайта');
   }
@@ -72,14 +62,16 @@ if (isValid) {
   }
 }
 
-enableValidation();
+
+
+/* enableValidation(); */
 
 // все настройки передаются при вызове
 enableValidation({
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__button',
-  inactiveButtonClass: 'popup__button_disabled',
+  inactiveButtonClass: 'popup__button-save_disabled',
   inputErrorClass: 'popup__input_type_error',
   errorClass: 'popup__error_visible'
 });
