@@ -12,6 +12,7 @@
   display: flex;
   margin-left: auto;
   padding: 0;
+  cursor: pointer;
 }
 .profile__button-add:hover {
   opacity: 0.6;

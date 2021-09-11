@@ -38,14 +38,14 @@ function setCustomError(input) {
   const validity = input.validity;
   input.setCustomValidity("");
 
-  if (validity.tooShort || validity.tooLong) {
+  /* if (validity.tooShort || validity.tooLong) {
      const currentLength = input.value.length;
      const min = input.getAttribute("minlength");
      const max = input.getAttribute("maxlength");
     input.setCustomValidity(
-       `Вы пропустили это поле. Введено ${currentLength}, а должно быть от ${min} до ${max}`
-    );
-  }
+        `Вы пропустили это поле. Введено ${currentLength}, а должно быть от ${min} до ${max}`
+   );
+  } */
   if (validity.typeMismatch) {
     input.setCustomValidity('Ведите адрес сайта');
   }
@@ -73,3 +73,13 @@ if (isValid) {
 }
 
 enableValidation();
+
+// все настройки передаются при вызове
+enableValidation({
+  formSelector: '.popup__form',
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__button',
+  inactiveButtonClass: 'popup__button_disabled',
+  inputErrorClass: 'popup__input_type_error',
+  errorClass: 'popup__error_visible'
+});
