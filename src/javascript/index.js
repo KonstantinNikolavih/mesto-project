@@ -1,11 +1,20 @@
 // index.js
 import '../page/index.css'; // добавьте импорт главного файла стилей
 
-import {popupPofile, popupEditProfile, popupEditProfileClose, popup, formElement, profileNameElement, profileJobElement, nameInput, jobInput, save, openPopupCard, popupCard, closePopupCard, elementList, openPopupCardImg, popupCardImg, closePopupCardImg, elementsTitleCard, popupInputCard, popupItemCardName, popupItemCardJob, photoTemplat, cardElement, elementsImg, elementsTitl, elementsGroup, elementsDele,} from './utils';
-import {openPopup, closePopup} from './modal';
+import {popupPofile, popupEditProfile, popupEditProfileClose, popup, formElement, profileNameElement, profileJobElement, nameInput, jobInput, save, openPopupCard, popupCard, closePopupCard, elementList, openPopupCardImg, popupCardImg, closePopupCardImg, elementsTitleCard, popupInputCard, popupItemCardName, popupItemCardJob, photoTemplat, cardElement, elementsImg, elementsTitl, elementsGroup, elementsDele,} from './utils.js';
+import {openPopup, closePopup} from './modal.js';
+import {parametrCard} from './card.js';
+import { initialCards } from './initialCards.js';
+import {setSubmitButtonState, setFieldError, setCustomError, handleFormInput, enableValidation, } from './validate.js';
+
+export function handleFormSubmit(event) {
+  event.preventDefault();
+  /* const form = event.currentTarget;  */
+}
+
 
  // открытие
- popupEditProfile.addEventListener('click', function() {
+popupEditProfile.addEventListener('click', function() {
    openPopup(popupPofile)
  })
 
@@ -41,26 +50,19 @@ function closePopupZon (event) {
   }
 };
 
-// закрытие popup на кнопку esc
-popupPofile.addEventListener("click", function() {
-  document.addEventListener('keydown', closePopupEsc);
-});
+//function кнопки esc
 function closePopupEsc (evt) {
   if(evt.key === "Escape") {
     closePopup(document.querySelector(".popup_opened"));
-    closePopup();
   }
 };
 
-//обробочик add popup на кнопку esc
-  const addClosePopupEsc = ("click", function () {
-    document.addEventListener('keydown', closePopupEsc);
-  });
+document.addEventListener('keydown', closePopupEsc);
 
-//обробочик remove popup на кнопку esc
-  const removeClosePopupEsc = ("click", function () {
-    document.addEventListener('keydown', closePopupEsc);
-  });
+//удаление remove popup на кнопку esc
+export function closePopupEscRem() {
+  removeClosePopupEsc('keydown', closePopupEsc);
+}
 
 // открытие popup 2
 openPopupCard.addEventListener('click', function() {
@@ -76,47 +78,6 @@ closePopupCardImg.addEventListener('click', function() {
   closePopup(popupCardImg)
 })
 
-// добовление перемены с карточкими
-/* const popupInputCard = document.querySelector('.popup__input_card');
-const popupItemCardName = document.querySelector('.popup__item-card-name');
-const popupItemCardJob = document.querySelector('.popup__item-card-occupation'); */
-// обшие переменые для функции добовления карточки
-  function parametrCard(card) {
-// template карточки
-const photoTemplat = document.querySelector('.item_template').content;
-const cardElement = photoTemplat.querySelector('.elements__item').cloneNode(true);
-const elementsImg = cardElement.querySelector('.elements__img');
-const elementsTitl = cardElement.querySelector('.elements__title');
-const elementsGroup = cardElement.querySelector('.elements__group');
-const elementsDele = cardElement.querySelector('.elements__dele');
-
-
-  elementsImg.setAttribute('src', card.link);
-  elementsImg.setAttribute('alt', card.name);
-  elementsTitl.textContent = card.name;
-
-// соединяем функции popup card и template // открытие card img
-elementsImg.addEventListener('click', function() {
-  openPopupCardImg.src = elementsImg.src
-  openPopupCardImg.alt = elementsTitl.textContent
-  elementsTitleCard.textContent = elementsTitl.textContent
-  openPopup(popupCardImg)
-});
-
-//обработчик функции лайка Card
-elementsGroup.addEventListener("click", function (evt) {
-  const likeCardListeners = evt.target;
-  likeCardListeners.classList.toggle('elements__group_active');
-});
-
-// удаление карточек
-  elementsDele.addEventListener("click", function () {
-  const deleteCardListeners = elementsDele.closest('.elements__item');
-  deleteCardListeners.remove();
-});
-
-return cardElement
-}
 function addCards(cardLos) {
   const card = parametrCard(cardLos);
   elementList.prepend(card);
@@ -139,9 +100,3 @@ const arrayCards = function() {
 }
 // вызов из массива
 arrayCards()
-
-
-
-import { initialCards } from './card.js';
-/* import { } from './modal.js'; */
-import {} from './validate.js';
