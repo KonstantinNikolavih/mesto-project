@@ -1,29 +1,16 @@
+import {handleFormSubmit, } from './index.js';
 //форма валидации
-function enableValidation() {
+export function enableValidation() {
   const form = document.querySelector('.popup__input');
   form.addEventListener('submit', handleFormSubmit);
   form.addEventListener('input', handleFormInput);
 
-const formCard = document.querySelector('.popup__input_card');
+  const formCard = document.querySelector('.popup__input_card');
   formCard.addEventListener('submit', handleFormSubmit);
   formCard.addEventListener('input', handleFormInput);
 }
 
-function handleFormSubmit(event) {
-  event.preventDefault();
-
-  const form = event.currentTarget;
-   const isValid = form.checkValidity();
-
-  if (isValid) {
-   /*  form.reset(); */
-  } else {
-   /*  form.reset(); */
-  }
-}
-
-
-function handleFormInput (event) {
+export function handleFormInput (event) {
   const input = event.target;
   const form = event.currentTarget;
 
@@ -33,20 +20,18 @@ function handleFormInput (event) {
 }
 
 // Найдём невалидные поля и установим ис тексты ошибок
-function setCustomError(input) {
+export function setCustomError(input) {
   const validity = input.validity;
   input.setCustomValidity("");
-  if (validity.typeMismatch) {
-    input.setCustomValidity('Ведите адрес сайта');
-  }
+
 }
 // Показываем тексты ошибок пользователям
-function setFieldError(input) {
+export function setFieldError(input) {
   const span = document.querySelector(`#error__${input.id}`);
   span.textContent = input.validationMessage;
 }
 // Активируем или деактивируем кнопку
-function setSubmitButtonState(form) {
+export function setSubmitButtonState(form) {
 
   const button = form.querySelector('.popup__button-save');
   const isValid = form.checkValidity();
@@ -56,8 +41,9 @@ if (isValid) {
   button.classList.remove('popup__button-save_active');
   button.removeAttribute('disabled');
 } else {
-  button.classList.remove('popup__button-save_disabled');
+
   button.classList.add('popup__button-save_active');
+  button.classList.remove('popup__button-save_disabled');
   button.setAttribute('disabled', 'disabled');
   }
 }
@@ -68,10 +54,11 @@ if (isValid) {
 
 // все настройки передаются при вызове
 enableValidation({
-  formSelector: '.popup__form',
-  inputSelector: '.popup__input',
-  submitButtonSelector: '.popup__button',
+  formSelector: '.popup__input',
+  inputSelector: '.popup__item',
+  submitButtonSelector: '.popup__button-save',
   inactiveButtonClass: 'popup__button-save_disabled',
-  inputErrorClass: 'popup__input_type_error',
-  errorClass: 'popup__error_visible'
+  inputErrorClass: 'popup__item_error',
+  errorClass: 'popup__button-save_active'
+
 });

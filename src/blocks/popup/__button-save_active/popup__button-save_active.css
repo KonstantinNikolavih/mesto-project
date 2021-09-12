@@ -8,6 +8,7 @@
   margin-left: 36px;
   border: 0;
   border-radius: 2px;
+  cursor: auto;
   opacity: 1;
 }
 .popup__button-save_active:hover {
