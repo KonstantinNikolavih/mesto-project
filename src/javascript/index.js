@@ -3,9 +3,9 @@ import '../page/index.css'; // добавьте импорт главного ф
 
 import {popupPofile, popupEditProfile, popupEditProfileClose, popup, formElement, profileNameElement, profileJobElement, nameInput, jobInput, save, openPopupCard, popupCard, closePopupCard, elementList, openPopupCardImg, popupCardImg, closePopupCardImg, elementsTitleCard, popupInputCard, popupItemCardName, popupItemCardJob, photoTemplat, cardElement, elementsImg, elementsTitl, elementsGroup, elementsDele,} from './utils.js';
 import {openPopup, closePopup} from './modal.js';
-import {parametrCard} from './card.js';
+import {parametrCard, valid,} from './card.js';
 import { initialCards } from './initialCards.js';
-import {setSubmitButtonState, setFieldError, setCustomError, handleFormInput, enableValidation, } from './validate.js';
+import {setSubmitButtonState, enableValidationd, setFieldError, setCustomError, handleFormInput, enableValidation, } from './validate.js';
 
 export function handleFormSubmit(event) {
   event.preventDefault();
@@ -99,4 +99,7 @@ const arrayCards = function() {
   initialCards.forEach (card => addCards(card))
 }
 // вызов из массива
-arrayCards()
+arrayCards();
+
+enableValidation(valid);
+
