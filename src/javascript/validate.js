@@ -1,4 +1,5 @@
 import {handleFormSubmit, } from './index.js';
+import {valid, } from './card';
 //форма валидации
 export function enableValidation() {
   const form = document.querySelector('.popup__input');
@@ -9,6 +10,23 @@ export function enableValidation() {
   formCard.addEventListener('submit', handleFormSubmit);
   formCard.addEventListener('input', handleFormInput);
 }
+
+/* setbutton(button, false)
+
+function setbutton(button, isValid) {
+  button.disabled = !isValid;
+}
+
+function setSubmit(form) {
+  const x = [...form.elements].reduce((acc, el) =>  setSubmitButtonState(el) && acc, true);
+  setbutton(button, x);
+}
+
+form.addEventListener('input', () => setSubmit(form)); */
+
+
+
+
 
 export function handleFormInput (event) {
   const input = event.target;
@@ -41,24 +59,10 @@ if (isValid) {
   button.classList.remove('popup__button-save_active');
   button.removeAttribute('disabled');
 } else {
-
   button.classList.add('popup__button-save_active');
   button.classList.remove('popup__button-save_disabled');
   button.setAttribute('disabled', 'disabled');
   }
-}
+};
 
-
-
-/* enableValidation(); */
-
-// все настройки передаются при вызове
-enableValidation({
-  formSelector: '.popup__input',
-  inputSelector: '.popup__item',
-  submitButtonSelector: '.popup__button-save',
-  inactiveButtonClass: 'popup__button-save_disabled',
-  inputErrorClass: 'popup__item_error',
-  errorClass: 'popup__button-save_active'
-
-});
+enableValidation(valid);

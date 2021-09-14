@@ -1,6 +1,7 @@
 import { popupInputCard, popupItemCardName, popupItemCardJob, openPopupCardImg, elementsTitleCard, popupCardImg,} from './utils.js';
 import { openPopup, closePopup, } from './modal.js';
 import {initialCards,} from './initialCards.js';
+import {} from './index.js';
 // добовление перемены с карточкими
 /* const popupInputCard = document.querySelector('.popup__input_card');
 const popupItemCardName = document.querySelector('.popup__item-card-name');
@@ -41,4 +42,16 @@ elementsGroup.addEventListener("click", function (evt) {
 });
 
 return cardElement
+};
+
+
+
+// все настройки передаются при вызове
+export const valid = {
+  formSelector:'.popup__input',
+  inputSelector:'.popup__item',
+  inputErrorClass: '.popup__item_error',
+  submitButtonSelector: '.popup__button-save',
+  inActiveButtonClass: 'popup__button-save_disabled',
+  errorClass: '.popup__button-save_active',
 };
