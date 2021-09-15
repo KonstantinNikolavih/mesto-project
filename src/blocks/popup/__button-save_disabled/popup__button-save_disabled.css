@@ -10,6 +10,7 @@
   border-radius: 2px;
   border-radius: 10px;
   opacity: 1;
+  cursor: pointer;
 }
 .popup__button-save_disabled:hover {
   background-color: rgba(0, 0, 0, 0.8);

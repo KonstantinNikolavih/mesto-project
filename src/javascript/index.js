@@ -7,11 +7,17 @@ import {parametrCard, valid,} from './card.js';
 import { initialCards } from './initialCards.js';
 import {setSubmitButtonState, enableValidationd, setFieldError, setCustomError, handleFormInput, enableValidation, } from './validate.js';
 
-export function handleFormSubmit(event) {
+ export function handleFormSubmit(event) {
   event.preventDefault();
-  /* const form = event.currentTarget;  */
-}
 
+ const form = event.currentTarget;
+  const isValid = form.checkValidity();
+ if (isValid) {
+  button.removeAttribute(valid.submitButtonSelector);
+ } else {
+  button.removeAttribute('disabled');
+ }
+}
 
  // открытие
 popupEditProfile.addEventListener('click', function() {
@@ -85,14 +91,16 @@ function addCards(cardLos) {
 
 // form для добавления карты и сброс карты и закрытие popup
 popupInputCard.addEventListener('submit', function (evt) {
+
   evt.preventDefault()
   addCards({
   name: popupItemCardName.value,
   link: popupItemCardJob.value
 })
 
-  popupInputCard.reset()
+  /* popupInputCard.reset(valid.submitButtonSelector); */
   closePopup(popupCard)
+  /* form.reset(valid.submitButtonSelector) */
 });
 // добовления карточек из массива
 const arrayCards = function() {
