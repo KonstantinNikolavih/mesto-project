@@ -5,19 +5,8 @@ import {popupPofile, popupEditProfile, popupEditProfileClose, popup, formElement
 import {openPopup, closePopup} from './modal.js';
 import {parametrCard, valid,} from './card.js';
 import { initialCards } from './initialCards.js';
-import {setSubmitButtonState, enableValidationd, setFieldError, setCustomError, handleFormInput, enableValidation, } from './validate.js';
+import {setSubmitButtonState, enableValidationd, setFieldError, setCustomError, disableButton, handleFormInput, enableValidation, } from './validate.js';
 
- export function handleFormSubmit(event) {
-  event.preventDefault();
-
- const form = event.currentTarget;
-  const isValid = form.checkValidity();
- if (isValid) {
-  button.removeAttribute(valid.submitButtonSelector);
- } else {
-  button.removeAttribute('disabled');
- }
-}
 
  // открытие
 popupEditProfile.addEventListener('click', function() {
@@ -67,7 +56,7 @@ document.addEventListener('keydown', closePopupEsc);
 
 //удаление remove popup на кнопку esc
 export function closePopupEscRem() {
-  removeClosePopupEsc('keydown', closePopupEsc);
+   document.removeEventListener('keydown', closePopupEsc);
 }
 
 // открытие popup 2
@@ -98,10 +87,11 @@ popupInputCard.addEventListener('submit', function (evt) {
   link: popupItemCardJob.value
 })
 
-  /* popupInputCard.reset(valid.submitButtonSelector); */
+  popupInputCard.reset();
   closePopup(popupCard)
-  /* form.reset(valid.submitButtonSelector) */
+  disableButton(popupInputCard, '.popup__button-save', 'popup__button-save_disabled')
 });
+
 // добовления карточек из массива
 const arrayCards = function() {
   initialCards.forEach (card => addCards(card))
