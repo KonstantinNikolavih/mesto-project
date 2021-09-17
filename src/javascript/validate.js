@@ -1,4 +1,4 @@
-import {valid, } from './card';
+import {valid, } from './utils';
 //форма валидации
 export function enableValidation() {
   const form = document.querySelector(valid.formSelector);
@@ -20,7 +20,6 @@ export function handleFormInput (event) {
 
 // Найдём невалидные поля и установим ис тексты ошибок
 export function setCustomError(input) {
-  const validity = input.validity;
   input.setCustomValidity("");
 }
 

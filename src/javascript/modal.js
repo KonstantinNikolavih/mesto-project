@@ -1,14 +1,13 @@
-import {addClosePopupEsc, removeClosePopupEsc, closePopupEscRem} from './index.js';
-/* export */
+import {closePopupEsc} from './index.js';
 
 // function открытие popup
 export function openPopup(popup) {
   popup.classList.add("popup_opened");
-/*   closePopupEscRem(); */
+  document.addEventListener('keydown', closePopupEsc);
  }
 
 // function закрытие popup
 export function closePopup(popup) {
   popup.classList.remove("popup_opened");
-  closePopupEscRem();
+  document.removeEventListener('keydown', closePopupEsc); 
  }

@@ -1,11 +1,14 @@
 // index.js
 import '../page/index.css'; // добавьте импорт главного файла стилей
 
-import {popupPofile, popupEditProfile, popupEditProfileClose, popup, formElement, profileNameElement, profileJobElement, nameInput, jobInput, save, openPopupCard, popupCard, closePopupCard, elementList, openPopupCardImg, popupCardImg, closePopupCardImg, elementsTitleCard, popupInputCard, popupItemCardName, popupItemCardJob, photoTemplat, cardElement, elementsImg, elementsTitl, elementsGroup, elementsDele,} from './utils.js';
-import {openPopup, closePopup} from './modal.js';
-import {parametrCard, valid,} from './card.js';
-import { initialCards } from './initialCards.js';
-import {setSubmitButtonState, enableValidationd, setFieldError, setCustomError, disableButton, handleFormInput, enableValidation, } from './validate.js';
+import {initialCards, valid, popupPofile, popupEditProfile, popupEditProfileClose, formElement, profileNameElement, profileJobElement, nameInput, jobInput, save, openPopupCard, popupCard, closePopupCard, elementList, popupCardImg, closePopupCardImg, popupInputCard, popupItemCardName, popupItemCardJob, } from './utils.js';
+import {openPopup, closePopup} from './modal.js'; 
+import {parametrCard,} from './card.js'; 
+/* import {initialCards, valid, popupPofile, popupEditProfile, popupEditProfileClose, formElement, profileNameElement, profileJobElement, nameInput, jobInput, save, openPopupCard, popupCard, closePopupCard, elementList, openPopupCardImg, popupCardImg, closePopupCardImg, elementsTitleCard, popupInputCard, popupItemCardName, popupItemCardJob, photoTemplat, cardElement, elementsImg, elementsTitl, elementsGroup, elementsDele,} from './utils.js';
+import {openPopup, closePopup} from './modal.js'; 
+import {parametrCard,} from './card.js';  */
+/* import {setSubmitButtonState, enableValidationd, setFieldError, setCustomError, disableButton, handleFormInput, enableValidation, } from './validate.js';  */
+import { disableButton, enableValidation, } from './validate.js'; 
 
 
  // открытие
@@ -30,7 +33,6 @@ function formProfil (evt) {
   profileNameElement.textContent = nameInput.value;
   profileJobElement.textContent = jobInput.value;
   /* formElement.reset() */
-
 }
   formElement.addEventListener('submit', formProfil);
 
@@ -46,18 +48,11 @@ function closePopupZon (event) {
 };
 
 //function кнопки esc
-function closePopupEsc (evt) {
+export function closePopupEsc (evt) {
   if(evt.key === "Escape") {
     closePopup(document.querySelector(".popup_opened"));
   }
 };
-
-document.addEventListener('keydown', closePopupEsc);
-
-//удаление remove popup на кнопку esc
-export function closePopupEscRem() {
-   document.removeEventListener('keydown', closePopupEsc);
-}
 
 // открытие popup 2
 openPopupCard.addEventListener('click', function() {
