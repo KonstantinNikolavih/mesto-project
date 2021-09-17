@@ -4,12 +4,7 @@ import '../page/index.css'; // добавьте импорт главного ф
 import {initialCards, valid, popupPofile, popupEditProfile, popupEditProfileClose, formElement, profileNameElement, profileJobElement, nameInput, jobInput, save, openPopupCard, popupCard, closePopupCard, elementList, popupCardImg, closePopupCardImg, popupInputCard, popupItemCardName, popupItemCardJob, } from './utils.js';
 import {openPopup, closePopup} from './modal.js'; 
 import {parametrCard,} from './card.js'; 
-/* import {initialCards, valid, popupPofile, popupEditProfile, popupEditProfileClose, formElement, profileNameElement, profileJobElement, nameInput, jobInput, save, openPopupCard, popupCard, closePopupCard, elementList, openPopupCardImg, popupCardImg, closePopupCardImg, elementsTitleCard, popupInputCard, popupItemCardName, popupItemCardJob, photoTemplat, cardElement, elementsImg, elementsTitl, elementsGroup, elementsDele,} from './utils.js';
-import {openPopup, closePopup} from './modal.js'; 
-import {parametrCard,} from './card.js';  */
-/* import {setSubmitButtonState, enableValidationd, setFieldError, setCustomError, disableButton, handleFormInput, enableValidation, } from './validate.js';  */
 import { disableButton, enableValidation, } from './validate.js'; 
-
 
  // открытие
 popupEditProfile.addEventListener('click', function() {
