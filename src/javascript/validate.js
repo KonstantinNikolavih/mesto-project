@@ -1,6 +1,7 @@
-import {valid, } from './utils';
+import { valid, } from './utils';
+
 //форма валидации
-export function enableValidation() {
+export function enableValidation(valid) {
   const form = document.querySelector(valid.formSelector);
   form.addEventListener('input', handleFormInput);
 
@@ -8,7 +9,7 @@ export function enableValidation() {
   formCard.addEventListener('input', handleFormInput);
 }
 
-export function handleFormInput (event) {
+function handleFormInput(event) {
   const input = event.target;
   const form = event.currentTarget;
 
@@ -34,20 +35,19 @@ export function setSubmitButtonState(form) {
   const button = form.querySelector(valid.submitButtonSelector);
   const isValid = form.checkValidity();
 
-if (isValid) {
-  button.classList.remove(valid.inActiveButtonClass);
-  button.removeAttribute('disabled');
-} else {
-  button.classList.add(valid.inActiveButtonClass);
-  button.setAttribute('disabled', 'disabled');
+  if (isValid) {
+    button.classList.remove(valid.inActiveButtonClass);
+    button.removeAttribute('disabled');
+  } else {
+    button.classList.add(valid.inActiveButtonClass);
+    button.setAttribute('disabled', 'disabled');
   }
 };
 
-
-export function disableButton (form, submitButtonSelector, inActiveButtonClass) {
+export function disableButton(form, submitButtonSelector, inActiveButtonClass) {
   const button = form.querySelector(submitButtonSelector);
   button.classList.add(inActiveButtonClass);
   button.setAttribute('disabled', 'disabled')
-}
+};
 
 enableValidation(valid);
