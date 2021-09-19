@@ -1,26 +1,25 @@
-import { valid, } from './utils';
+import { valid, } from './index';
+// СПАСИБО БОЛЬШОЕ ЗА ПОМОЩЬ БЕЗ ВАС БЫ НЕ РАЗОБРАЛСЯ!!!, уже на пределе был((...
 
-//форма валидации
 export function enableValidation(valid) {
-  const form = document.querySelector(valid.formSelector);
-  form.addEventListener('input', handleFormInput);
-
-  const formCard = document.querySelector(valid.formSelectorCard);
-  formCard.addEventListener('input', handleFormInput);
+  const forms = document.querySelectorAll(valid.formSelector);
+  forms.forEach((form) => {
+    form.addEventListener('input', (evt) => handleFormInput(evt, valid));
+ })
 }
 
-function handleFormInput(event) {
+function handleFormInput(event, valid) {
   const input = event.target;
   const form = event.currentTarget;
 
 
-  setCustomError(input);
-  setFieldError(input);
-  setSubmitButtonState(form)
+  setCustomError(input, valid);
+  setFieldError(input, valid);
+  setSubmitButtonState(form, valid);
 }
 
 // Найдём невалидные поля и установим ис тексты ошибок
-export function setCustomError(input) {
+export function setCustomError(input, valid) {
   input.setCustomValidity("");
 }
 
@@ -30,7 +29,7 @@ export function setFieldError(input) {
   span.textContent = input.validationMessage;
 }
 // Активируем или деактивируем кнопку
-export function setSubmitButtonState(form) {
+export function setSubmitButtonState(form, valid) {
 
   const button = form.querySelector(valid.submitButtonSelector);
   const isValid = form.checkValidity();
@@ -49,5 +48,3 @@ export function disableButton(form, submitButtonSelector, inActiveButtonClass) {
   button.classList.add(inActiveButtonClass);
   button.setAttribute('disabled', 'disabled')
 };
-
-enableValidation(valid);

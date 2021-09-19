@@ -1,6 +1,7 @@
-import { openPopupCardImg, elementsTitleCard, popupCardImg, initialCards, elementList, popupInputCard, popupItemCardName, popupItemCardJob, popupCard, valid, } from './utils';
+import { openPopupCardImg, elementsTitleCard, popupCardImg, initialCards, elementList, popupInputCard, popupItemCardName, popupItemCardJob, popupCard, } from './utils';
 import { openPopup, closePopup, } from './modal.js';
 import { disableButton } from './validate';
+import { valid, } from './index'
 
 // обшие переменые для функции добовления карточи
 export function createCard(card) {
