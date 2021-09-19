@@ -59,6 +59,8 @@ popupInputCard.addEventListener('submit', function (evt) {
 });
 
 // добовления карточек из массива
-initialCards.forEach(item => {
-  addCards(item, elementList);
-});
+export function renderCards(cards) {
+  cards.forEach(item => {
+    addCards(item, elementList);
+  });
+}

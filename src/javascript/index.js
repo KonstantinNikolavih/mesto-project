@@ -1,9 +1,9 @@
 // index.js
 import '../page/index.css'; // добавьте импорт главного файла стилей
 
-import { openPopupCard, popupCard, closePopupCard, elementList, popupCardImg, closePopupCardImg, } from './utils.js';
+import { openPopupCard, popupCard, closePopupCard, elementList, popupCardImg, closePopupCardImg, initialCards, } from './utils.js';
 import { openPopup, closePopup } from './modal.js';
-import { parametrCard } from './card'
+import { parametrCard, renderCards } from './card'
 import { disableButton, enableValidation, } from './validate.js';
 import { profileSubmit } from './profile';
 
@@ -30,3 +30,5 @@ enableValidation({
   inActiveButtonClass: 'popup__button-save_disabled',
   errorClass: '.popup__button-save_active',
 });
+// вызов массива
+renderCards(initialCards);
