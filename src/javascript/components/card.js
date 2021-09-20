@@ -1,7 +1,8 @@
-import { openPopupCardImg, elementsTitleCard, popupCardImg, initialCards, elementList, popupInputCard, popupItemCardName, popupItemCardJob, popupCard, } from './utils';
-import { openPopup, closePopup, } from './modal.js';
-import { disableButton } from './validate';
-import { valid, } from './index'
+import { openPopupCardImg, elementsTitleCard, popupCardImg, initialCards, elementList, popupInputCard, popupItemCardName, popupItemCardJob, popupCard, } from '../components/utils';
+import { openPopup, closePopup, } from '../components/modal';
+import { disableButton } from '../components/validate';
+import { valid, } from '../../javascript/utils/peremen';
+
 
 // обшие переменые для функции добовления карточи
 export function createCard(card) {

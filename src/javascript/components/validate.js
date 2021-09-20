@@ -1,6 +1,3 @@
-import { valid, } from './index';
-// СПАСИБО БОЛЬШОЕ ЗА ПОМОЩЬ БЕЗ ВАС БЫ НЕ РАЗОБРАЛСЯ!!!, уже на пределе был((...
-
 export function enableValidation(valid) {
   const forms = document.querySelectorAll(valid.formSelector);
   forms.forEach((form) => {
@@ -11,7 +8,6 @@ export function enableValidation(valid) {
 function handleFormInput(event, valid) {
   const input = event.target;
   const form = event.currentTarget;
-
 
   setCustomError(input, valid);
   setFieldError(input, valid);
@@ -43,7 +39,7 @@ export function setSubmitButtonState(form, valid) {
   }
 };
 
-export function disableButton(form, submitButtonSelector, inActiveButtonClass) {
+export function disableButton(form, submitButtonSelector, inActiveButtonClass, valid) {
   const button = form.querySelector(submitButtonSelector);
   button.classList.add(inActiveButtonClass);
   button.setAttribute('disabled', 'disabled')

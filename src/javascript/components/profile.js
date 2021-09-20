@@ -1,5 +1,5 @@
-import { popupEditProfile, popupEditProfileClose, formElement, profileNameElement, profileJobElement, nameInput, jobInput, popupPofile, } from './utils'
-import { closePopup, openPopup, } from './modal';
+import { popupEditProfile, popupEditProfileClose, formElement, profileNameElement, profileJobElement, nameInput, jobInput, popupPofile, } from '../components/utils'
+import { closePopup, openPopup, } from '../components/modal';
 
 // открытие
 popupEditProfile.addEventListener('click', function () {
