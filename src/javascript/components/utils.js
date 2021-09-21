@@ -1,3 +1,9 @@
+// 4 popup avatar
+// переменые для аватар
+export const popupAvatar = document.querySelector('.popup_avatar');
+export const popupEditAvatar = document.querySelector('.profile__avatar_button');
+export const popupEditAvatarClose = popupAvatar.querySelector('.popup__close');
+/* export const popupAvatarInput = document.querySelector('.popup__input'); */
 // 1 popup profile
 // создаём переменые
 export const popupPofile = document.querySelector('.popup_pofil');
