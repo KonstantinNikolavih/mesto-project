@@ -14,6 +14,9 @@ popupEditProfileClose.addEventListener('click', function () {
 // fuction имя функции (параметры) {инструкции}
 export function profileSubmit(evt) {
   evt.preventDefault();
+
+ /*  statysButton(save, true)
+  getProfil(nameInput.value, jobInput.value) */
   // соединяем popup c section profil для созранения изменений
   profileNameElement.textContent = nameInput.value;
   profileJobElement.textContent = jobInput.value;
@@ -22,3 +25,11 @@ export function profileSubmit(evt) {
 }
 //обробочик
 formElement.addEventListener('submit', profileSubmit);
+
+
+//function Сохранение... отправка на сервер
+/* export function statysButton(button, dowen, ) {
+  button.textContent = dowen;'Сохранение...';
+  button.textContent = dowen;'Сохранить';
+}
+ */
