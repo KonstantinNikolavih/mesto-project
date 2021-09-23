@@ -8,6 +8,9 @@ import { disableButton, enableValidation } from '../javascript/components/valida
 import { profileSubmit } from '../javascript/components/profile';
 import { valid } from '../javascript/utils/peremen';
 
+// api
+import { getCard, getProfil, } from '../javascript/components/api';
+
 // открытие popup 2
 openPopupCard.addEventListener('click', function () {
   openPopup(popupCard)
@@ -55,3 +58,7 @@ renderCards(initialCards);
 //ошибка при не удачной попытки
 /* .catch */
 
+// Промикс
+Promise.all([getCard(), getProfil()])
+// оброботка на сервере
+.then()
