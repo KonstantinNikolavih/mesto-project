@@ -16,12 +16,12 @@ function closePopupZon(event) {
 export function openPopup(popup) {
   popup.classList.add("popup_opened");
   document.addEventListener('keydown', closePopupEsc);
-  document.addEventListener('click', closePopupZon);
+//  document.addEventListener('click', closePopupZon);
 }
 
 // function закрытие popup
 export function closePopup(popup) {
   popup.classList.remove("popup_opened");
   document.removeEventListener('keydown', closePopupEsc);
-  document.removeEventListener('click', closePopupZon);
+ // document.removeEventListener('click', closePopupZon);
 }

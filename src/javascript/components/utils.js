@@ -35,7 +35,7 @@ export const elementsTitleCard = document.querySelector('.elements__title_card')
 // добовление перемены с карточкими
 export const popupInputCard = document.querySelector('.popup__input_card');
 export const popupItemCardName = document.querySelector('.popup__item-card-name');
-export const popupItemCardJob = document.querySelector('.popup__item-card-occupation');
+export const popupItemCardPlace = document.querySelector('.popup__item-card-occupation');
 // template карточки
 // обшие переменые для функции добовления карточки
 export const photoTemplat = document.querySelector('.item_template').content;
@@ -71,3 +71,12 @@ export const initialCards = [
     link: 'https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg'
   }
 ];
+
+//function Сохранение... отправка на сервер
+export function statysButton(button, save) {
+  if (save) {
+    button.textContent = ('Сохранение...');
+  } else {
+    button.textContent = ('Сохранить');
+  }
+}

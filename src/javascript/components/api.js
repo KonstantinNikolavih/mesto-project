@@ -1,6 +1,6 @@
 // подключение
-const config = {
-  baseUrl: "https://nomoreparties.co/v1/plus-cohort-1",
+let config = {
+  baseUrl: "https://mesto.nomoreparties.co/v1/plus-cohort-1",
   headers: {
     authorization: "44181768-52c2-4bd5-af2c-8b3c8fbae037",
     "Content-Type": "application/json",
@@ -33,29 +33,27 @@ const getResponse = (res) => {
 //.catch запрос в случае ошибки
 
 // запрос профиля
-export const getProfil = (/* name, about, */ ) => {
+export const getProfil = (/* name, about, */) => {
   return fetch(`${config.baseUrl}/users/me`, {
-  method: 'GET',
-  headers: config.headers,
-})
-.then(getResponse)
+    method: 'GET',
+    headers: config.headers,
+  })
+    // .then(getResponse); - неверная запись. Нужно для then вызывать коллбэк, а не просто функцию
+    .then(res => (getResponse(res)))
 }
 
 //Редактирование профиля
-export const getProfilEdit = (name, about, ) => {
+export const getProfilEdit = (name, about) => {
   return fetch(`${config.baseUrl}/users/me`, {
-  method: 'PATCH',
-  headers: config.headers,
-  body: JSON.stringify({
-    name: name,
-    about: about,
+    method: 'PATCH',
+    headers: config.headers,
+    body: JSON.stringify({
+      name: name,
+      about: about,
+    })
   })
-})
-.then(getResponse)
+    .then(res => (getResponse(res)))
 }
-
-
-
 
 
 //Редактирование профиля
@@ -66,7 +64,7 @@ export const getProfilEdit = (name, about, ) => {
  })
  .then(getResponse);
  } */
- /* console.log(getProfil) */
+/* console.log(getProfil) */
 
 /* export const getProfil = (name, about, ) => {
   return fetch(`${config.baseUrl}/users/me`, {
@@ -81,28 +79,27 @@ export const getProfilEdit = (name, about, ) => {
   console.log(getResponse))
 } */
 
-// запрос профиля
-export const getCard = (/* name, about, */ ) => {
+// запрос массива карточек
+export const getCard = (/* name, about, */) => {
   return fetch(`${config.baseUrl}/cards`, {
-  method: 'GET',
-  headers: config.headers,
-})
-.then(getResponse)
+    method: 'GET',
+    headers: config.headers,
+  })
+    .then(res => (getResponse(res)))
 }
 
 
-
 //Добавление новой карточки
-export const getCardAdd = (name, link, ) => {
+export const addNewCard = (name, link) => {
   return fetch(`${config.baseUrl}/cards`, {
-  method: 'POST',
-  headers: config.headers,
-  body: JSON.stringify({
-    name: name,
-    link: link,
+    method: 'POST',
+    headers: config.headers,
+    body: JSON.stringify({
+      name: name,
+      link: link
+    })
   })
-})
-.then(getResponse);
+    .then(res => (getResponse(res)))
 }
 /*   })
     "likes": [],
@@ -118,3 +115,37 @@ export const getCardAdd = (name, link, ) => {
   },
   "createdAt": "2019-07-05T08:10:57.741Z"
 }, */
+
+export const deleteCard = (id) => {
+  return fetch(`${config.baseUrl}/cards/${id}`, {
+    method: 'DELETE',
+    headers: config.headers
+  })
+}
+
+export const putLike = (id) => {
+  return fetch(`${config.baseUrl}/cards/likes/${id}`, {
+    method: 'PUT',
+    headers: config.headers
+  })
+    .then(res => (getResponse(res)))
+}
+
+export const deleteLike = (id) => {
+  return fetch(`${config.baseUrl}/cards/likes/${id}`, {
+    method: 'DELETE',
+    headers: config.headers
+  })
+    .then(res => (getResponse(res)))
+}
+
+export function changeAvatar(url) {
+  return fetch(`${config.baseUrl}/users/me/avatar`, {
+    method: 'PATCH',
+    headers: config.headers,
+    body: JSON.stringify({
+      avatar: url
+    })
+  })
+    .then(res => (getResponse(res)))
+}
