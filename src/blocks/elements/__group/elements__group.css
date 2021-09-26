@@ -1,4 +1,5 @@
 .elements__group {
+  margin: 0;
   width: 22px;
   height: 19px;
   background-image: url(../../../images/Vector_cerdce.svg);
@@ -8,8 +9,6 @@
   padding: 0;
   background-size: cover;
   box-sizing: border-box;
-  margin-top: auto;
-  margin-bottom: auto;
   cursor: pointer;
 }
 .elements__group:hover {

@@ -1,10 +1,29 @@
-import { popupEditProfile, save, popupEditProfileClose, formElement, profileNameElement, profileJobElement, nameInput, jobInput, popupPofile, } from '../components/utils'
-import { closePopup, openPopup, } from '../components/modal';
+import {
+  popupEditProfile,
+  save,
+  popupEditProfileClose,
+  //formElements,
+  profileNameElement,
+  profileJobElement,
+  nameInput,
+  jobInput,
+  popupPofile,
+} from '../components/utils'
+import {closePopup, openPopup,} from '../components/modal';
 //обмен с сервером
-import { getProfil, } from '../components/api';
+import {getProfilEdit} from '../components/api';
+import {statysButton} from "./utils";
 
+// ищем не первый попавшийся элемент формы, а именно внутри попапа профиля!
+const formElement = popupPofile.querySelector('.popup__input');
+const buttonSaveProfile = popupPofile.querySelector('.popup__button-save');
 
-
+export function init(user) {
+  profileNameElement.textContent = user.name;
+  profileJobElement.textContent = user.about;
+  //обробочик
+  formElement.addEventListener('submit', profileSubmit);
+}
 // открытие
 popupEditProfile.addEventListener('click', function () {
   openPopup(popupPofile)
@@ -28,43 +47,24 @@ popupEditProfileClose.addEventListener('click', function () {
 
 
 // fuction имя функции (параметры) {инструкции}
-export function profileSubmit(evt) {
+function profileSubmit(evt) {
   evt.preventDefault();
 
-  statysButton(save, true)
+  statysButton(buttonSaveProfile, true);
   getProfilEdit(nameInput.value, jobInput.value)
     .then((data) => {
       // конвертируем отправку
-      profileJobElement.textContent = data.name;
-      profileNameElement.textContent = data.about;
+      profileNameElement.textContent = data.name;
+      profileJobElement.textContent = data.about;
       // соединяем popup c section profil для созранения изменений
-      profileNameElement.textContent = nameInput.value;
-      profileJobElement.textContent = jobInput.value;
+      // profileNameElement.textContent = nameInput.value;
+      // profileJobElement.textContent = jobInput.value;
       // закрытие формы после сохранения изменений
       closePopup(popupPofile)
-      console.log(data)
     })
 
     .catch((err) => console.log(`Ошибка ${err}`))
     .finally(() => {
-      statysButton(save, false)
-      console.log(err)
+      statysButton(buttonSaveProfile, false)
     });
-  }
-
-
-
-  //обробочик
-  formElement.addEventListener('submit', profileSubmit);
-
-
-
-
-  //function Сохранение... отправка на сервер
-  export function statysButton(save, /* dowen */) {
-    if (save) {
-      save.textContent = /* dowen */ ('Сохранение...');
-    } else {
-    save.textContent = /* dowen */ ('Сохранить');
-  }
 }
