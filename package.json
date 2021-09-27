@@ -7,13 +7,13 @@
     "build": "webpack --mode production",
     "dev": "webpack serve",
     "predeploy": "npm run build",
-   "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/KonstantinNikolavih/mesto.git"
   },
-  "author": "",
+  "author": "Kostik",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/KonstantinNikolavih/mesto/issues"
