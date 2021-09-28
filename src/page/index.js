@@ -32,6 +32,9 @@ window.onload = function () {
       initProfile(user);
       initCardsList(user);
     })
+    .catch((err) => {
+      console.log(err);
+  })
 }
 
 // api

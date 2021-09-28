@@ -12,7 +12,7 @@ import {
 import {closePopup, openPopup,} from '../components/modal';
 //обмен с сервером
 import {getProfilEdit} from '../components/api';
-import {statysButton} from "./utils";
+import {setSubmitButtonStatus} from "./utils";
 
 // ищем не первый попавшийся элемент формы, а именно внутри попапа профиля!
 const formElement = popupPofile.querySelector('.popup__input');
@@ -50,7 +50,7 @@ popupEditProfileClose.addEventListener('click', function () {
 function profileSubmit(evt) {
   evt.preventDefault();
 
-  statysButton(buttonSaveProfile, true);
+  setSubmitButtonStatus(buttonSaveProfile, true);
   getProfilEdit(nameInput.value, jobInput.value)
     .then((data) => {
       // конвертируем отправку
@@ -65,6 +65,6 @@ function profileSubmit(evt) {
 
     .catch((err) => console.log(`Ошибка ${err}`))
     .finally(() => {
-      statysButton(buttonSaveProfile, false)
+      setSubmitButtonStatus(buttonSaveProfile, false)
     });
 }

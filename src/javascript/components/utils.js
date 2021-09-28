@@ -73,7 +73,7 @@ export const initialCards = [
 ];
 
 //function Сохранение... отправка на сервер
-export function statysButton(button, save) {
+export function setSubmitButtonStatus(button, save) {
   if (save) {
     button.textContent = ('Сохранение...');
   } else {

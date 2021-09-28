@@ -1,7 +1,7 @@
 import {changeAvatar} from "./api";
 import {popupAvatar, popupAvatarInput, popupItemAvatar, profileAvatar} from "./utils";
 import {closePopup} from "./modal";
-import {statysButton} from "./utils";
+import {setSubmitButtonStatus} from "./utils";
 
 const buttonSaveNewAvatar = popupAvatar.querySelector('.popup__button-save');
 
@@ -14,7 +14,7 @@ const changeAvatarProfile = (url) => {
 }
 
 const changeAvatarServer = (url) => {
-  statysButton(buttonSaveNewAvatar, true)
+  setSubmitButtonStatus(buttonSaveNewAvatar, true)
   changeAvatar(url)
     .then(user => {
       changeAvatarProfile(user.avatar);
@@ -26,7 +26,7 @@ const changeAvatarServer = (url) => {
       console.log(err);
     })
     .finally(() => {
-      statysButton(buttonSaveNewAvatar, false)
+      setSubmitButtonStatus(buttonSaveNewAvatar, false)
     })
 }
 

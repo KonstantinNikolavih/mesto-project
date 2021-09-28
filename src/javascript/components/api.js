@@ -1,5 +1,5 @@
 // подключение
-let config = {
+const config = {
   baseUrl: "https://mesto.nomoreparties.co/v1/plus-cohort-1",
   headers: {
     authorization: "44181768-52c2-4bd5-af2c-8b3c8fbae037",
@@ -7,10 +7,6 @@ let config = {
   }
 }
 
-/* .then(res => res.json())
-.then((result) => {
-  console.log(result);
-}); */
 // http запросы клиента - method
 
 // GET - запрос данных
@@ -38,8 +34,8 @@ export const getProfil = (/* name, about, */) => {
     method: 'GET',
     headers: config.headers,
   })
-    // .then(getResponse); - неверная запись. Нужно для then вызывать коллбэк, а не просто функцию
-    .then(res => (getResponse(res)))
+  .then(getResponse);
+    /* .then(res => (getResponse(res))) вызывать коллбэк*/
 }
 
 //Редактирование профиля
@@ -52,32 +48,8 @@ export const getProfilEdit = (name, about) => {
       about: about,
     })
   })
-    .then(res => (getResponse(res)))
+  .then(getResponse);
 }
-
-
-//Редактирование профиля
-/* export const getProfil = () => {
-    return fetch(`${config.baseUrl}/users/me`, {
-     method: 'GET',
-    headers: config.headers,
- })
- .then(getResponse);
- } */
-/* console.log(getProfil) */
-
-/* export const getProfil = (name, about, ) => {
-  return fetch(`${config.baseUrl}/users/me`, {
-  method: 'PATCH',
-  headers: config.headers,
-  body: JSON.stringify({
-    name: name,
-    about: about,
-  })
-})
-.then(getResponse) => {
-  console.log(getResponse))
-} */
 
 // запрос массива карточек
 export const getCard = (/* name, about, */) => {
@@ -85,7 +57,7 @@ export const getCard = (/* name, about, */) => {
     method: 'GET',
     headers: config.headers,
   })
-    .then(res => (getResponse(res)))
+  .then(getResponse);
 }
 
 
@@ -99,22 +71,9 @@ export const addNewCard = (name, link) => {
       link: link
     })
   })
-    .then(res => (getResponse(res)))
+  .then(getResponse);
 }
-/*   })
-    "likes": [],
-  "_id": "5d1f0611d321eb4bdcd707dd",
-  "name": "Байкал",
-  "link": "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
-  "owner": {
-    "name": "Jacques Cousteau",
-    "about": "Sailor, researcher",
-    "avatar": "https://pictures.s3.yandex.net/frontend-developer/ava.jpg",
-    "_id": "ef5f7423f7f5e22bef4ad607",
-    "cohort": "local"
-  },
-  "createdAt": "2019-07-05T08:10:57.741Z"
-}, */
+
 
 export const deleteCard = (id) => {
   return fetch(`${config.baseUrl}/cards/${id}`, {
@@ -128,7 +87,7 @@ export const putLike = (id) => {
     method: 'PUT',
     headers: config.headers
   })
-    .then(res => (getResponse(res)))
+  .then(getResponse);
 }
 
 export const deleteLike = (id) => {
@@ -136,7 +95,7 @@ export const deleteLike = (id) => {
     method: 'DELETE',
     headers: config.headers
   })
-    .then(res => (getResponse(res)))
+  .then(getResponse);
 }
 
 export function changeAvatar(url) {
@@ -147,5 +106,5 @@ export function changeAvatar(url) {
       avatar: url
     })
   })
-    .then(res => (getResponse(res)))
+  .then(getResponse);
 }

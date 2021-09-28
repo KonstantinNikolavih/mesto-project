@@ -13,7 +13,7 @@ import {openPopup, closePopup,} from '../components/modal';
 import {disableButton} from '../components/validate';
 import {valid,} from '../../javascript/utils/peremen';
 import {getCard, addNewCard, deleteCard, putLike, deleteLike} from "./api";
-import {statysButton} from "./utils";
+import {setSubmitButtonStatus} from "./utils";
 
 let userData;
 
@@ -27,6 +27,9 @@ export function init(user) {
       cardArray.forEach(card => {
         addCards(card, user, elementList)
       })
+    })
+    .catch((err) => {
+      console.log(err);
     })
 }
 
@@ -113,7 +116,7 @@ export function addCards(cardLos, user, elementList) {
 // form для добавления карты и сброс карты и закрытие popup
 popupInputCard.addEventListener('submit', function (evt) {
   evt.preventDefault()
-  statysButton(buttonSaveCard, true);
+  setSubmitButtonStatus(buttonSaveCard, true);
   addNewCard(popupItemCardName.value, popupItemCardPlace.value)
     .then((res) => {
       addCards(res, userData, elementList)
@@ -125,7 +128,7 @@ popupInputCard.addEventListener('submit', function (evt) {
       console.log(`Ошибка: ${err}`);
     })
     .finally(() => {
-      statysButton(buttonSaveCard, false);
+      setSubmitButtonStatus(buttonSaveCard, false);
     })
 });
 
