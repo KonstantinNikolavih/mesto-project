@@ -1,14 +1,4 @@
-import {
-  popupEditProfile,
-  save,
-  popupEditProfileClose,
-  //formElements,
-  profileNameElement,
-  profileJobElement,
-  nameInput,
-  jobInput,
-  popupPofile,
-} from '../components/utils'
+import { popupEditProfile, save, popupEditProfileClose, profileNameElement, profileJobElement, nameInput, jobInput, popupPofile, } from '../components/utils'
 import {closePopup, openPopup,} from '../components/modal';
 //обмен с сервером
 import {getProfilEdit} from '../components/api';
@@ -33,18 +23,6 @@ popupEditProfile.addEventListener('click', function () {
 popupEditProfileClose.addEventListener('click', function () {
   closePopup(popupPofile)
 })
-
-
-//test 1
-/* export function profileSubmit(evt) {
-  evt.preventDefault();
-
- profileNameElement.textContent = nameInput.value;
- profileJobElement.textContent = jobInput.value;
-
- closePopup(popupPofile)
-}; */
-
 
 // fuction имя функции (параметры) {инструкции}
 function profileSubmit(evt) {

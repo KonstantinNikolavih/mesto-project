@@ -1,21 +1,7 @@
 // index.js
 import './index.css'; // добавьте импорт главного файла стилей
 
-import {
-  popupItemAvatar,
-  profileAvatar,
-  popupAvatarInput,
-  openPopupCard,
-  popupAvatar,
-  popupEditAvatar,
-  popupEditAvatarClose,
-  popupCard,
-  closePopupCard,
-  elementList,
-  popupCardImg,
-  closePopupCardImg,
-  initialCards,
-} from '../javascript/components/utils';
+import { popupItemAvatar, profileAvatar, popupAvatarInput, openPopupCard, popupAvatar, popupEditAvatar, popupEditAvatarClose, popupCard, closePopupCard, elementList, popupCardImg, closePopupCardImg, initialCards, } from '../javascript/components/utils';
 import {openPopup, closePopup} from '../javascript/components/modal.js';
 import {init as initCardsList} from '../javascript/components/card';
 import {enableValidation} from '../javascript/components/validate.js';

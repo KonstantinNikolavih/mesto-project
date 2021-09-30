@@ -1,14 +1,4 @@
-import {
-  openPopupCardImg,
-  elementsTitleCard,
-  popupCardImg,
-  initialCards,
-  elementList,
-  popupInputCard,
-  popupItemCardName,
-  popupItemCardPlace,
-  popupCard,
-} from '../components/utils';
+import { openPopupCardImg, elementsTitleCard, popupCardImg, initialCards, elementList, popupInputCard, popupItemCardName, popupItemCardPlace, popupCard, } from '../components/utils';
 import {openPopup, closePopup,} from '../components/modal';
 import {disableButton} from '../components/validate';
 import {valid,} from '../../javascript/utils/peremen';
